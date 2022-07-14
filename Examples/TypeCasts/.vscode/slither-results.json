@@ -1,0 +1,606 @@
+[
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "play",
+				"source_mapping": {
+					"start": 342,
+					"length": 64,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/SimpleTypeCasts.sol",
+					"filename_relative": "SimpleTypeCasts.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/SimpleTypeCasts.sol",
+					"filename_short": "SimpleTypeCasts.sol",
+					"is_dependency": false,
+					"lines": [
+						15,
+						16,
+						17
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "195fed01c7d875740592877ba6f7d3a2"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "Game",
+						"source_mapping": {
+							"start": 322,
+							"length": 86,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/SimpleTypeCasts.sol",
+							"filename_relative": "SimpleTypeCasts.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/SimpleTypeCasts.sol",
+							"filename_short": "SimpleTypeCasts.sol",
+							"is_dependency": false,
+							"lines": [
+								14,
+								15,
+								16,
+								17,
+								18
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "play(CounterLibrary)"
+				}
+			},
+			{
+				"type": "node",
+				"name": "c.add(1)",
+				"source_mapping": {
+					"start": 391,
+					"length": 8,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/SimpleTypeCasts.sol",
+					"filename_relative": "SimpleTypeCasts.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/SimpleTypeCasts.sol",
+					"filename_short": "SimpleTypeCasts.sol",
+					"is_dependency": false,
+					"lines": [
+						16
+					],
+					"starting_column": 9,
+					"ending_column": 17,
+					"_ext_source_hash": "5a5fdc7de29b7412ac7522d28ace329e"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "play",
+						"source_mapping": {
+							"start": 342,
+							"length": 64,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/SimpleTypeCasts.sol",
+							"filename_relative": "SimpleTypeCasts.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/SimpleTypeCasts.sol",
+							"filename_short": "SimpleTypeCasts.sol",
+							"is_dependency": false,
+							"lines": [
+								15,
+								16,
+								17
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "Game",
+								"source_mapping": {
+									"start": 322,
+									"length": 86,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/SimpleTypeCasts.sol",
+									"filename_relative": "SimpleTypeCasts.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/SimpleTypeCasts.sol",
+									"filename_short": "SimpleTypeCasts.sol",
+									"is_dependency": false,
+									"lines": [
+										14,
+										15,
+										16,
+										17,
+										18
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "play(CounterLibrary)"
+						}
+					}
+				}
+			}
+		],
+		"description": "Game.play(CounterLibrary) (SimpleTypeCasts.sol#15-17) ignores return value by c.add(1) (SimpleTypeCasts.sol#16)\n",
+		"markdown": "[Game.play(CounterLibrary)](SimpleTypeCasts.sol#L15-L17) ignores return value by [c.add(1)](SimpleTypeCasts.sol#L16)\n",
+		"first_markdown_element": "SimpleTypeCasts.sol#L15-L17",
+		"id": "d08373550aa187d68ba6644c60a8bab45b24cd4c5a3bb27d1ee4ceafb7881220",
+		"check": "unused-return",
+		"impact": "Medium",
+		"confidence": "Medium"
+	},
+	{
+		"elements": [
+			{
+				"type": "pragma",
+				"name": "^0.8.11",
+				"source_mapping": {
+					"start": 38,
+					"length": 24,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/SimpleTypeCasts.sol",
+					"filename_relative": "SimpleTypeCasts.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/SimpleTypeCasts.sol",
+					"filename_short": "SimpleTypeCasts.sol",
+					"is_dependency": false,
+					"lines": [
+						2
+					],
+					"starting_column": 1,
+					"ending_column": 25,
+					"_ext_source_hash": "be1324aef2812fb86cbcdbdc1ff9536f"
+				},
+				"type_specific_fields": {
+					"directive": [
+						"solidity",
+						"^",
+						"0.8",
+						".11"
+					]
+				}
+			}
+		],
+		"description": "Pragma version^0.8.11 (SimpleTypeCasts.sol#2) necessitates a version too recent to be trusted. Consider deploying with 0.6.12/0.7.6/0.8.7\n",
+		"markdown": "Pragma version[^0.8.11](SimpleTypeCasts.sol#L2) necessitates a version too recent to be trusted. Consider deploying with 0.6.12/0.7.6/0.8.7\n",
+		"first_markdown_element": "SimpleTypeCasts.sol#L2",
+		"id": "06ab0ad34f9843a6bfdf06776128706e75260657abc50964fdead7e6f7d58722",
+		"check": "solc-version",
+		"impact": "Informational",
+		"confidence": "High"
+	},
+	{
+		"elements": [],
+		"description": "solc-0.8.11 is not recommended for deployment\n",
+		"markdown": "solc-0.8.11 is not recommended for deployment\n",
+		"first_markdown_element": "",
+		"id": "75da9d16be61e19366db397b80063c0442f462664c0c4e249c853864cce0b7f3",
+		"check": "solc-version",
+		"impact": "Informational",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "add",
+				"source_mapping": {
+					"start": 177,
+					"length": 48,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/SimpleTypeCasts.sol",
+					"filename_relative": "SimpleTypeCasts.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/SimpleTypeCasts.sol",
+					"filename_short": "SimpleTypeCasts.sol",
+					"is_dependency": false,
+					"lines": [
+						7
+					],
+					"starting_column": 5,
+					"ending_column": 53,
+					"_ext_source_hash": "4ecc8efee13da5ee91ce2cc95699ba5d"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "CounterLibrary",
+						"source_mapping": {
+							"start": 136,
+							"length": 96,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/SimpleTypeCasts.sol",
+							"filename_relative": "SimpleTypeCasts.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/SimpleTypeCasts.sol",
+							"filename_short": "SimpleTypeCasts.sol",
+							"is_dependency": false,
+							"lines": [
+								6,
+								7,
+								8,
+								9
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "add(uint256)"
+				}
+			}
+		],
+		"description": "add(uint256) should be declared external:\n\t- CounterLibrary.add(uint256) (SimpleTypeCasts.sol#7)\n",
+		"markdown": "add(uint256) should be declared external:\n\t- [CounterLibrary.add(uint256)](SimpleTypeCasts.sol#L7)\n",
+		"first_markdown_element": "SimpleTypeCasts.sol#L7",
+		"id": "7acdb090066df59fb2fb1149ff1e18d06541e32be985049d36dfc8f61e0493ba",
+		"check": "external-function",
+		"impact": "Optimization",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "add",
+				"source_mapping": {
+					"start": 269,
+					"length": 49,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/SimpleTypeCasts.sol",
+					"filename_relative": "SimpleTypeCasts.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/SimpleTypeCasts.sol",
+					"filename_short": "SimpleTypeCasts.sol",
+					"is_dependency": false,
+					"lines": [
+						11
+					],
+					"starting_column": 5,
+					"ending_column": 54,
+					"_ext_source_hash": "dcce88b112897f5840aa4395cf08cb60"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "CounterLib",
+						"source_mapping": {
+							"start": 233,
+							"length": 87,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/SimpleTypeCasts.sol",
+							"filename_relative": "SimpleTypeCasts.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/SimpleTypeCasts.sol",
+							"filename_short": "SimpleTypeCasts.sol",
+							"is_dependency": false,
+							"lines": [
+								10,
+								11,
+								12
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "add(uint256)"
+				}
+			}
+		],
+		"description": "add(uint256) should be declared external:\n\t- CounterLib.add(uint256) (SimpleTypeCasts.sol#11)\n",
+		"markdown": "add(uint256) should be declared external:\n\t- [CounterLib.add(uint256)](SimpleTypeCasts.sol#L11)\n",
+		"first_markdown_element": "SimpleTypeCasts.sol#L11",
+		"id": "e64de7f084510bef7b4d7f5544e972ee1dd92d46d3a1c2b45e855675da3a688d",
+		"check": "external-function",
+		"impact": "Optimization",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "play",
+				"source_mapping": {
+					"start": 342,
+					"length": 64,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/SimpleTypeCasts.sol",
+					"filename_relative": "SimpleTypeCasts.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/SimpleTypeCasts.sol",
+					"filename_short": "SimpleTypeCasts.sol",
+					"is_dependency": false,
+					"lines": [
+						15,
+						16,
+						17
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "195fed01c7d875740592877ba6f7d3a2"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "Game",
+						"source_mapping": {
+							"start": 322,
+							"length": 86,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/SimpleTypeCasts.sol",
+							"filename_relative": "SimpleTypeCasts.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/SimpleTypeCasts.sol",
+							"filename_short": "SimpleTypeCasts.sol",
+							"is_dependency": false,
+							"lines": [
+								14,
+								15,
+								16,
+								17,
+								18
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "play(CounterLibrary)"
+				}
+			}
+		],
+		"description": "play(CounterLibrary) should be declared external:\n\t- Game.play(CounterLibrary) (SimpleTypeCasts.sol#15-17)\n",
+		"markdown": "play(CounterLibrary) should be declared external:\n\t- [Game.play(CounterLibrary)](SimpleTypeCasts.sol#L15-L17)\n",
+		"first_markdown_element": "SimpleTypeCasts.sol#L15-L17",
+		"id": "fe59acf7358388fe271977c8ff3b98384f11362220b64b3002c73a744c111445",
+		"check": "external-function",
+		"impact": "Optimization",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "pragma",
+				"name": "^0.8.11",
+				"source_mapping": {
+					"start": 38,
+					"length": 24,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/TypeCasts.sol",
+					"filename_relative": "TypeCasts.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/TypeCasts.sol",
+					"filename_short": "TypeCasts.sol",
+					"is_dependency": false,
+					"lines": [
+						2
+					],
+					"starting_column": 1,
+					"ending_column": 25,
+					"_ext_source_hash": "be1324aef2812fb86cbcdbdc1ff9536f"
+				},
+				"type_specific_fields": {
+					"directive": [
+						"solidity",
+						"^",
+						"0.8",
+						".11"
+					]
+				}
+			}
+		],
+		"description": "Pragma version^0.8.11 (TypeCasts.sol#2) necessitates a version too recent to be trusted. Consider deploying with 0.6.12/0.7.6/0.8.7\n",
+		"markdown": "Pragma version[^0.8.11](TypeCasts.sol#L2) necessitates a version too recent to be trusted. Consider deploying with 0.6.12/0.7.6/0.8.7\n",
+		"first_markdown_element": "TypeCasts.sol#L2",
+		"id": "19e3c49dbc57f34c07a1ce55a89d5ac0d432d7f329459fd2fb027d119734b1b5",
+		"check": "solc-version",
+		"impact": "Informational",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "add",
+				"source_mapping": {
+					"start": 370,
+					"length": 99,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/TypeCasts.sol",
+					"filename_relative": "TypeCasts.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/TypeCasts.sol",
+					"filename_short": "TypeCasts.sol",
+					"is_dependency": false,
+					"lines": [
+						21,
+						22,
+						23,
+						24
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "869b95df9dcc6ac5fa66f3f253f4905c"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "CounterLibrary",
+						"source_mapping": {
+							"start": 304,
+							"length": 167,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/TypeCasts.sol",
+							"filename_relative": "TypeCasts.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/TypeCasts.sol",
+							"filename_short": "TypeCasts.sol",
+							"is_dependency": false,
+							"lines": [
+								18,
+								19,
+								20,
+								21,
+								22,
+								23,
+								24,
+								25
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "add(uint256)"
+				}
+			},
+			{
+				"type": "function",
+				"name": "add",
+				"source_mapping": {
+					"start": 203,
+					"length": 97,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/TypeCasts.sol",
+					"filename_relative": "TypeCasts.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/TypeCasts.sol",
+					"filename_short": "TypeCasts.sol",
+					"is_dependency": false,
+					"lines": [
+						12,
+						13,
+						14,
+						15
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "5a0186f0a801a9fe771393f550e19d9f"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "FakeCounter",
+						"source_mapping": {
+							"start": 140,
+							"length": 162,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/TypeCasts.sol",
+							"filename_relative": "TypeCasts.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/TypeCasts.sol",
+							"filename_short": "TypeCasts.sol",
+							"is_dependency": false,
+							"lines": [
+								9,
+								10,
+								11,
+								12,
+								13,
+								14,
+								15,
+								16
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "add(uint256)"
+				}
+			}
+		],
+		"description": "add(uint256) should be declared external:\n\t- CounterLibrary.add(uint256) (TypeCasts.sol#21-24)\n\t- FakeCounter.add(uint256) (TypeCasts.sol#12-15)\n",
+		"markdown": "add(uint256) should be declared external:\n\t- [CounterLibrary.add(uint256)](TypeCasts.sol#L21-L24)\n\t- [FakeCounter.add(uint256)](TypeCasts.sol#L12-L15)\n",
+		"first_markdown_element": "TypeCasts.sol#L21-L24",
+		"id": "88e2760671538b0868b9d0d80d17e24fa202e61d46e8b39293df9bd3c5e335ae",
+		"check": "external-function",
+		"impact": "Optimization",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "play",
+				"source_mapping": {
+					"start": 493,
+					"length": 85,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/TypeCasts.sol",
+					"filename_relative": "TypeCasts.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/TypeCasts.sol",
+					"filename_short": "TypeCasts.sol",
+					"is_dependency": false,
+					"lines": [
+						28,
+						29,
+						30
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "b7ac7637189a43b82c850fd42bac1fe7"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "Game",
+						"source_mapping": {
+							"start": 473,
+							"length": 211,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/TypeCasts.sol",
+							"filename_relative": "TypeCasts.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/TypeCasts.sol",
+							"filename_short": "TypeCasts.sol",
+							"is_dependency": false,
+							"lines": [
+								27,
+								28,
+								29,
+								30,
+								31,
+								32,
+								33,
+								34
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "play(CounterLibrary)"
+				}
+			}
+		],
+		"description": "play(CounterLibrary) should be declared external:\n\t- Game.play(CounterLibrary) (TypeCasts.sol#28-30)\n",
+		"markdown": "play(CounterLibrary) should be declared external:\n\t- [Game.play(CounterLibrary)](TypeCasts.sol#L28-L30)\n",
+		"first_markdown_element": "TypeCasts.sol#L28-L30",
+		"id": "fe59acf7358388fe271977c8ff3b98384f11362220b64b3002c73a744c111445",
+		"check": "external-function",
+		"impact": "Optimization",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "getCounter",
+				"source_mapping": {
+					"start": 583,
+					"length": 99,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/TypeCasts.sol",
+					"filename_relative": "TypeCasts.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/TypeCasts.sol",
+					"filename_short": "TypeCasts.sol",
+					"is_dependency": false,
+					"lines": [
+						31,
+						32,
+						33
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "c528cfb7d5cf2cb2436b40340ada389b"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "Game",
+						"source_mapping": {
+							"start": 473,
+							"length": 211,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/TypeCasts.sol",
+							"filename_relative": "TypeCasts.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/TypeCasts/TypeCasts.sol",
+							"filename_short": "TypeCasts.sol",
+							"is_dependency": false,
+							"lines": [
+								27,
+								28,
+								29,
+								30,
+								31,
+								32,
+								33,
+								34
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "getCounter(CounterLibrary)"
+				}
+			}
+		],
+		"description": "getCounter(CounterLibrary) should be declared external:\n\t- Game.getCounter(CounterLibrary) (TypeCasts.sol#31-33)\n",
+		"markdown": "getCounter(CounterLibrary) should be declared external:\n\t- [Game.getCounter(CounterLibrary)](TypeCasts.sol#L31-L33)\n",
+		"first_markdown_element": "TypeCasts.sol#L31-L33",
+		"id": "e3a1f097663b4c950634e39edd28e03da71cef956cc66f4ca9beb131f7b6c6a7",
+		"check": "external-function",
+		"impact": "Optimization",
+		"confidence": "High"
+	}
+]

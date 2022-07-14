@@ -1,0 +1,5776 @@
+[
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "sendEtherWithTransfer",
+				"source_mapping": {
+					"start": 118,
+					"length": 109,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						11,
+						12,
+						13
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "52891bff3705f3691ce84b390e6de664"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "Sender",
+						"source_mapping": {
+							"start": 59,
+							"length": 634,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22,
+								23,
+								24,
+								25,
+								26,
+								27,
+								28,
+								29
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "sendEtherWithTransfer(address)"
+				}
+			},
+			{
+				"type": "node",
+				"name": "_contract.transfer(2000000000000000000)",
+				"source_mapping": {
+					"start": 193,
+					"length": 27,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						12
+					],
+					"starting_column": 9,
+					"ending_column": 36,
+					"_ext_source_hash": "973aea25f98dc0a6e718dc995fd69cc0"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "sendEtherWithTransfer",
+						"source_mapping": {
+							"start": 118,
+							"length": 109,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								11,
+								12,
+								13
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "Sender",
+								"source_mapping": {
+									"start": 59,
+									"length": 634,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_relative": "SendEther.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_short": "SendEther.sol",
+									"is_dependency": false,
+									"lines": [
+										5,
+										6,
+										7,
+										8,
+										9,
+										10,
+										11,
+										12,
+										13,
+										14,
+										15,
+										16,
+										17,
+										18,
+										19,
+										20,
+										21,
+										22,
+										23,
+										24,
+										25,
+										26,
+										27,
+										28,
+										29
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "sendEtherWithTransfer(address)"
+						}
+					}
+				}
+			}
+		],
+		"description": "Sender.sendEtherWithTransfer(address) (SendEther.sol#11-13) sends eth to arbitrary user\n\tDangerous calls:\n\t- _contract.transfer(2000000000000000000) (SendEther.sol#12)\n",
+		"markdown": "[Sender.sendEtherWithTransfer(address)](SendEther.sol#L11-L13) sends eth to arbitrary user\n\tDangerous calls:\n\t- [_contract.transfer(2000000000000000000)](SendEther.sol#L12)\n",
+		"first_markdown_element": "SendEther.sol#L11-L13",
+		"id": "1f712db503c666dd1d6b22e4f8194c1ef0ffcc004c36134cd0d5db5c4a75b070",
+		"check": "arbitrary-send",
+		"impact": "High",
+		"confidence": "Medium"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "sendEtherWithSend",
+				"source_mapping": {
+					"start": 233,
+					"length": 173,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						15,
+						16,
+						17,
+						18,
+						19
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "4207dcab6358f3d245397acb3d2285a0"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "Sender",
+						"source_mapping": {
+							"start": 59,
+							"length": 634,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22,
+								23,
+								24,
+								25,
+								26,
+								27,
+								28,
+								29
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "sendEtherWithSend(address)"
+				}
+			},
+			{
+				"type": "node",
+				"name": "sent = _contract.send(2000000000000000000)",
+				"source_mapping": {
+					"start": 318,
+					"length": 35,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						16
+					],
+					"starting_column": 9,
+					"ending_column": 44,
+					"_ext_source_hash": "34bcc899781600e2e0d4b0f88acbdb6b"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "sendEtherWithSend",
+						"source_mapping": {
+							"start": 233,
+							"length": 173,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								15,
+								16,
+								17,
+								18,
+								19
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "Sender",
+								"source_mapping": {
+									"start": 59,
+									"length": 634,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_relative": "SendEther.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_short": "SendEther.sol",
+									"is_dependency": false,
+									"lines": [
+										5,
+										6,
+										7,
+										8,
+										9,
+										10,
+										11,
+										12,
+										13,
+										14,
+										15,
+										16,
+										17,
+										18,
+										19,
+										20,
+										21,
+										22,
+										23,
+										24,
+										25,
+										26,
+										27,
+										28,
+										29
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "sendEtherWithSend(address)"
+						}
+					}
+				}
+			}
+		],
+		"description": "Sender.sendEtherWithSend(address) (SendEther.sol#15-19) sends eth to arbitrary user\n\tDangerous calls:\n\t- sent = _contract.send(2000000000000000000) (SendEther.sol#16)\n",
+		"markdown": "[Sender.sendEtherWithSend(address)](SendEther.sol#L15-L19) sends eth to arbitrary user\n\tDangerous calls:\n\t- [sent = _contract.send(2000000000000000000)](SendEther.sol#L16)\n",
+		"first_markdown_element": "SendEther.sol#L15-L19",
+		"id": "fe17c7463c72e293c386ca26f54947d5c1e46f8771b3dee8af14956b454bf050",
+		"check": "arbitrary-send",
+		"impact": "High",
+		"confidence": "Medium"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "sendEtherWithCall",
+				"source_mapping": {
+					"start": 412,
+					"length": 180,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						21,
+						22,
+						23,
+						24
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "977cb8e355cf3c35fde9affd6b757b6c"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "Sender",
+						"source_mapping": {
+							"start": 59,
+							"length": 634,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22,
+								23,
+								24,
+								25,
+								26,
+								27,
+								28,
+								29
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "sendEtherWithCall(address)"
+				}
+			},
+			{
+				"type": "node",
+				"name": "(sent,data) = _contract.call{value: 2000000000000000000}()",
+				"source_mapping": {
+					"start": 497,
+					"length": 67,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						22
+					],
+					"starting_column": 9,
+					"ending_column": 76,
+					"_ext_source_hash": "91e4d9cdd7e884a818cfd22439f0aa1a"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "sendEtherWithCall",
+						"source_mapping": {
+							"start": 412,
+							"length": 180,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								21,
+								22,
+								23,
+								24
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "Sender",
+								"source_mapping": {
+									"start": 59,
+									"length": 634,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_relative": "SendEther.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_short": "SendEther.sol",
+									"is_dependency": false,
+									"lines": [
+										5,
+										6,
+										7,
+										8,
+										9,
+										10,
+										11,
+										12,
+										13,
+										14,
+										15,
+										16,
+										17,
+										18,
+										19,
+										20,
+										21,
+										22,
+										23,
+										24,
+										25,
+										26,
+										27,
+										28,
+										29
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "sendEtherWithCall(address)"
+						}
+					}
+				}
+			}
+		],
+		"description": "Sender.sendEtherWithCall(address) (SendEther.sol#21-24) sends eth to arbitrary user\n\tDangerous calls:\n\t- (sent,data) = _contract.call{value: 2000000000000000000}() (SendEther.sol#22)\n",
+		"markdown": "[Sender.sendEtherWithCall(address)](SendEther.sol#L21-L24) sends eth to arbitrary user\n\tDangerous calls:\n\t- [(sent,data) = _contract.call{value: 2000000000000000000}()](SendEther.sol#L22)\n",
+		"first_markdown_element": "SendEther.sol#L21-L24",
+		"id": "0a1ceefb26ece95babcccd8ae0bd50e3d839bdfc642ca39010f2d428cace1d2e",
+		"check": "arbitrary-send",
+		"impact": "High",
+		"confidence": "Medium"
+	},
+	{
+		"elements": [
+			{
+				"type": "contract",
+				"name": "Receiver",
+				"source_mapping": {
+					"start": 695,
+					"length": 505,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						51,
+						52,
+						53,
+						54
+					],
+					"starting_column": 1,
+					"ending_column": 2,
+					"_ext_source_hash": "d2931a7ef6db8f0bdfcf3b28f7b29084"
+				}
+			},
+			{
+				"type": "function",
+				"name": "fallback",
+				"source_mapping": {
+					"start": 851,
+					"length": 116,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						41,
+						42,
+						43,
+						44,
+						45
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "15bf73cd7c1c5644c8e7e368e03dbce1"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "Receiver",
+						"source_mapping": {
+							"start": 695,
+							"length": 505,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								31,
+								32,
+								33,
+								34,
+								35,
+								36,
+								37,
+								38,
+								39,
+								40,
+								41,
+								42,
+								43,
+								44,
+								45,
+								46,
+								47,
+								48,
+								49,
+								50,
+								51,
+								52,
+								53,
+								54
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "fallback()"
+				}
+			}
+		],
+		"description": "Contract locking ether found:\n\tContract Receiver (SendEther.sol#31-54) has payable functions:\n\t - Receiver.fallback() (SendEther.sol#41-45)\n\tBut does not have a function to withdraw the ether\n",
+		"markdown": "Contract locking ether found:\n\tContract [Receiver](SendEther.sol#L31-L54) has payable functions:\n\t - [Receiver.fallback()](SendEther.sol#L41-L45)\n\tBut does not have a function to withdraw the ether\n",
+		"first_markdown_element": "SendEther.sol#L31-L54",
+		"id": "6f33b2e41e3b4ce851f068674538bccff31c2acaf2f58ec68d7ea90d2f1bd80d",
+		"check": "locked-ether",
+		"impact": "Medium",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "attack",
+				"source_mapping": {
+					"start": 973,
+					"length": 126,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						47,
+						48,
+						49
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "ed28a856cb6cc767aac937726ef0c382"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "Receiver",
+						"source_mapping": {
+							"start": 695,
+							"length": 505,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								31,
+								32,
+								33,
+								34,
+								35,
+								36,
+								37,
+								38,
+								39,
+								40,
+								41,
+								42,
+								43,
+								44,
+								45,
+								46,
+								47,
+								48,
+								49,
+								50,
+								51,
+								52,
+								53,
+								54
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "attack()"
+				}
+			},
+			{
+				"type": "node",
+				"name": "_target.call(abi.encodeWithSignature(sendEtherWithCall(address),address(this)))",
+				"source_mapping": {
+					"start": 1010,
+					"length": 82,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						48
+					],
+					"starting_column": 9,
+					"ending_column": 91,
+					"_ext_source_hash": "d3ded214185dad2e3c9c748f4d2ca4a3"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "attack",
+						"source_mapping": {
+							"start": 973,
+							"length": 126,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								47,
+								48,
+								49
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "Receiver",
+								"source_mapping": {
+									"start": 695,
+									"length": 505,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_relative": "SendEther.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_short": "SendEther.sol",
+									"is_dependency": false,
+									"lines": [
+										31,
+										32,
+										33,
+										34,
+										35,
+										36,
+										37,
+										38,
+										39,
+										40,
+										41,
+										42,
+										43,
+										44,
+										45,
+										46,
+										47,
+										48,
+										49,
+										50,
+										51,
+										52,
+										53,
+										54
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "attack()"
+						}
+					}
+				}
+			}
+		],
+		"description": "Receiver.attack() (SendEther.sol#47-49) ignores return value by _target.call(abi.encodeWithSignature(sendEtherWithCall(address),address(this))) (SendEther.sol#48)\n",
+		"markdown": "[Receiver.attack()](SendEther.sol#L47-L49) ignores return value by [_target.call(abi.encodeWithSignature(sendEtherWithCall(address),address(this)))](SendEther.sol#L48)\n",
+		"first_markdown_element": "SendEther.sol#L47-L49",
+		"id": "de35230c48b4b3ca24e30c486d1e7fefac7ac0df593597d86a0e05edf82dc0e0",
+		"check": "unchecked-lowlevel",
+		"impact": "Medium",
+		"confidence": "Medium"
+	},
+	{
+		"elements": [
+			{
+				"type": "variable",
+				"name": "_contract",
+				"source_mapping": {
+					"start": 149,
+					"length": 25,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						11
+					],
+					"starting_column": 36,
+					"ending_column": 61,
+					"_ext_source_hash": "21765653964ac7ce2a98fb57d593f170"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "sendEtherWithTransfer",
+						"source_mapping": {
+							"start": 118,
+							"length": 109,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								11,
+								12,
+								13
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "Sender",
+								"source_mapping": {
+									"start": 59,
+									"length": 634,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_relative": "SendEther.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_short": "SendEther.sol",
+									"is_dependency": false,
+									"lines": [
+										5,
+										6,
+										7,
+										8,
+										9,
+										10,
+										11,
+										12,
+										13,
+										14,
+										15,
+										16,
+										17,
+										18,
+										19,
+										20,
+										21,
+										22,
+										23,
+										24,
+										25,
+										26,
+										27,
+										28,
+										29
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "sendEtherWithTransfer(address)"
+						}
+					}
+				}
+			},
+			{
+				"type": "node",
+				"name": "_contract.transfer(2000000000000000000)",
+				"source_mapping": {
+					"start": 193,
+					"length": 27,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						12
+					],
+					"starting_column": 9,
+					"ending_column": 36,
+					"_ext_source_hash": "973aea25f98dc0a6e718dc995fd69cc0"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "sendEtherWithTransfer",
+						"source_mapping": {
+							"start": 118,
+							"length": 109,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								11,
+								12,
+								13
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "Sender",
+								"source_mapping": {
+									"start": 59,
+									"length": 634,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_relative": "SendEther.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_short": "SendEther.sol",
+									"is_dependency": false,
+									"lines": [
+										5,
+										6,
+										7,
+										8,
+										9,
+										10,
+										11,
+										12,
+										13,
+										14,
+										15,
+										16,
+										17,
+										18,
+										19,
+										20,
+										21,
+										22,
+										23,
+										24,
+										25,
+										26,
+										27,
+										28,
+										29
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "sendEtherWithTransfer(address)"
+						}
+					}
+				}
+			}
+		],
+		"description": "Sender.sendEtherWithTransfer(address)._contract (SendEther.sol#11) lacks a zero-check on :\n\t\t- _contract.transfer(2000000000000000000) (SendEther.sol#12)\n",
+		"markdown": "[Sender.sendEtherWithTransfer(address)._contract](SendEther.sol#L11) lacks a zero-check on :\n\t\t- [_contract.transfer(2000000000000000000)](SendEther.sol#L12)\n",
+		"first_markdown_element": "SendEther.sol#L11",
+		"id": "c92502bdec229b2a3cc2fe1782675268a9547c652aa985852cbc25b837054655",
+		"check": "missing-zero-check",
+		"impact": "Low",
+		"confidence": "Medium"
+	},
+	{
+		"elements": [
+			{
+				"type": "variable",
+				"name": "_contract",
+				"source_mapping": {
+					"start": 260,
+					"length": 25,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						15
+					],
+					"starting_column": 32,
+					"ending_column": 57,
+					"_ext_source_hash": "21765653964ac7ce2a98fb57d593f170"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "sendEtherWithSend",
+						"source_mapping": {
+							"start": 233,
+							"length": 173,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								15,
+								16,
+								17,
+								18,
+								19
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "Sender",
+								"source_mapping": {
+									"start": 59,
+									"length": 634,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_relative": "SendEther.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_short": "SendEther.sol",
+									"is_dependency": false,
+									"lines": [
+										5,
+										6,
+										7,
+										8,
+										9,
+										10,
+										11,
+										12,
+										13,
+										14,
+										15,
+										16,
+										17,
+										18,
+										19,
+										20,
+										21,
+										22,
+										23,
+										24,
+										25,
+										26,
+										27,
+										28,
+										29
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "sendEtherWithSend(address)"
+						}
+					}
+				}
+			},
+			{
+				"type": "node",
+				"name": "sent = _contract.send(2000000000000000000)",
+				"source_mapping": {
+					"start": 318,
+					"length": 35,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						16
+					],
+					"starting_column": 9,
+					"ending_column": 44,
+					"_ext_source_hash": "34bcc899781600e2e0d4b0f88acbdb6b"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "sendEtherWithSend",
+						"source_mapping": {
+							"start": 233,
+							"length": 173,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								15,
+								16,
+								17,
+								18,
+								19
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "Sender",
+								"source_mapping": {
+									"start": 59,
+									"length": 634,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_relative": "SendEther.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_short": "SendEther.sol",
+									"is_dependency": false,
+									"lines": [
+										5,
+										6,
+										7,
+										8,
+										9,
+										10,
+										11,
+										12,
+										13,
+										14,
+										15,
+										16,
+										17,
+										18,
+										19,
+										20,
+										21,
+										22,
+										23,
+										24,
+										25,
+										26,
+										27,
+										28,
+										29
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "sendEtherWithSend(address)"
+						}
+					}
+				}
+			}
+		],
+		"description": "Sender.sendEtherWithSend(address)._contract (SendEther.sol#15) lacks a zero-check on :\n\t\t- sent = _contract.send(2000000000000000000) (SendEther.sol#16)\n",
+		"markdown": "[Sender.sendEtherWithSend(address)._contract](SendEther.sol#L15) lacks a zero-check on :\n\t\t- [sent = _contract.send(2000000000000000000)](SendEther.sol#L16)\n",
+		"first_markdown_element": "SendEther.sol#L15",
+		"id": "44e83e24a7c02944dddb290bb4e8364d064796dbd3d4fb930b81408bbc2d4b00",
+		"check": "missing-zero-check",
+		"impact": "Low",
+		"confidence": "Medium"
+	},
+	{
+		"elements": [
+			{
+				"type": "variable",
+				"name": "_contract",
+				"source_mapping": {
+					"start": 439,
+					"length": 25,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						21
+					],
+					"starting_column": 32,
+					"ending_column": 57,
+					"_ext_source_hash": "21765653964ac7ce2a98fb57d593f170"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "sendEtherWithCall",
+						"source_mapping": {
+							"start": 412,
+							"length": 180,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								21,
+								22,
+								23,
+								24
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "Sender",
+								"source_mapping": {
+									"start": 59,
+									"length": 634,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_relative": "SendEther.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_short": "SendEther.sol",
+									"is_dependency": false,
+									"lines": [
+										5,
+										6,
+										7,
+										8,
+										9,
+										10,
+										11,
+										12,
+										13,
+										14,
+										15,
+										16,
+										17,
+										18,
+										19,
+										20,
+										21,
+										22,
+										23,
+										24,
+										25,
+										26,
+										27,
+										28,
+										29
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "sendEtherWithCall(address)"
+						}
+					}
+				}
+			},
+			{
+				"type": "node",
+				"name": "(sent,data) = _contract.call{value: 2000000000000000000}()",
+				"source_mapping": {
+					"start": 497,
+					"length": 67,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						22
+					],
+					"starting_column": 9,
+					"ending_column": 76,
+					"_ext_source_hash": "91e4d9cdd7e884a818cfd22439f0aa1a"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "sendEtherWithCall",
+						"source_mapping": {
+							"start": 412,
+							"length": 180,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								21,
+								22,
+								23,
+								24
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "Sender",
+								"source_mapping": {
+									"start": 59,
+									"length": 634,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_relative": "SendEther.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_short": "SendEther.sol",
+									"is_dependency": false,
+									"lines": [
+										5,
+										6,
+										7,
+										8,
+										9,
+										10,
+										11,
+										12,
+										13,
+										14,
+										15,
+										16,
+										17,
+										18,
+										19,
+										20,
+										21,
+										22,
+										23,
+										24,
+										25,
+										26,
+										27,
+										28,
+										29
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "sendEtherWithCall(address)"
+						}
+					}
+				}
+			}
+		],
+		"description": "Sender.sendEtherWithCall(address)._contract (SendEther.sol#21) lacks a zero-check on :\n\t\t- (sent,data) = _contract.call{value: 2000000000000000000}() (SendEther.sol#22)\n",
+		"markdown": "[Sender.sendEtherWithCall(address)._contract](SendEther.sol#L21) lacks a zero-check on :\n\t\t- [(sent,data) = _contract.call{value: 2000000000000000000}()](SendEther.sol#L22)\n",
+		"first_markdown_element": "SendEther.sol#L21",
+		"id": "2d20d3560e9fd9c68c99d76ea41c359ad8f077a677d2ac4acd5d93428275bb2e",
+		"check": "missing-zero-check",
+		"impact": "Low",
+		"confidence": "Medium"
+	},
+	{
+		"elements": [
+			{
+				"type": "variable",
+				"name": "target",
+				"source_mapping": {
+					"start": 797,
+					"length": 14,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						37
+					],
+					"starting_column": 17,
+					"ending_column": 31,
+					"_ext_source_hash": "0430602171557689b745e883557d0661"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "constructor",
+						"source_mapping": {
+							"start": 785,
+							"length": 60,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								37,
+								38,
+								39
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "Receiver",
+								"source_mapping": {
+									"start": 695,
+									"length": 505,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_relative": "SendEther.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_short": "SendEther.sol",
+									"is_dependency": false,
+									"lines": [
+										31,
+										32,
+										33,
+										34,
+										35,
+										36,
+										37,
+										38,
+										39,
+										40,
+										41,
+										42,
+										43,
+										44,
+										45,
+										46,
+										47,
+										48,
+										49,
+										50,
+										51,
+										52,
+										53,
+										54
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "constructor(address)"
+						}
+					}
+				}
+			},
+			{
+				"type": "node",
+				"name": "_target = target",
+				"source_mapping": {
+					"start": 822,
+					"length": 16,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						38
+					],
+					"starting_column": 9,
+					"ending_column": 25,
+					"_ext_source_hash": "d8d2e3d999332ad8013235f3c9073512"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "constructor",
+						"source_mapping": {
+							"start": 785,
+							"length": 60,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								37,
+								38,
+								39
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "Receiver",
+								"source_mapping": {
+									"start": 695,
+									"length": 505,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_relative": "SendEther.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_short": "SendEther.sol",
+									"is_dependency": false,
+									"lines": [
+										31,
+										32,
+										33,
+										34,
+										35,
+										36,
+										37,
+										38,
+										39,
+										40,
+										41,
+										42,
+										43,
+										44,
+										45,
+										46,
+										47,
+										48,
+										49,
+										50,
+										51,
+										52,
+										53,
+										54
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "constructor(address)"
+						}
+					}
+				}
+			}
+		],
+		"description": "Receiver.constructor(address).target (SendEther.sol#37) lacks a zero-check on :\n\t\t- _target = target (SendEther.sol#38)\n",
+		"markdown": "[Receiver.constructor(address).target](SendEther.sol#L37) lacks a zero-check on :\n\t\t- [_target = target](SendEther.sol#L38)\n",
+		"first_markdown_element": "SendEther.sol#L37",
+		"id": "f34faf1373a18c7e272eb0878540414ed6fe90ba2e48331635923700beb1548d",
+		"check": "missing-zero-check",
+		"impact": "Low",
+		"confidence": "Medium"
+	},
+	{
+		"elements": [
+			{
+				"type": "pragma",
+				"name": "^0.8.11",
+				"source_mapping": {
+					"start": 32,
+					"length": 24,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						2
+					],
+					"starting_column": 1,
+					"ending_column": 25,
+					"_ext_source_hash": "be1324aef2812fb86cbcdbdc1ff9536f"
+				},
+				"type_specific_fields": {
+					"directive": [
+						"solidity",
+						"^",
+						"0.8",
+						".11"
+					]
+				}
+			}
+		],
+		"description": "Pragma version^0.8.11 (SendEther.sol#2) necessitates a version too recent to be trusted. Consider deploying with 0.6.12/0.7.6/0.8.7\n",
+		"markdown": "Pragma version[^0.8.11](SendEther.sol#L2) necessitates a version too recent to be trusted. Consider deploying with 0.6.12/0.7.6/0.8.7\n",
+		"first_markdown_element": "SendEther.sol#L2",
+		"id": "4470b6dc685f8d6ef3ad97c85a6a6860ea430c0f88dd24cc2beae2534fee4d3a",
+		"check": "solc-version",
+		"impact": "Informational",
+		"confidence": "High"
+	},
+	{
+		"elements": [],
+		"description": "solc-0.8.11 is not recommended for deployment\n",
+		"markdown": "solc-0.8.11 is not recommended for deployment\n",
+		"first_markdown_element": "",
+		"id": "75da9d16be61e19366db397b80063c0442f462664c0c4e249c853864cce0b7f3",
+		"check": "solc-version",
+		"impact": "Informational",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "sendEtherWithCall",
+				"source_mapping": {
+					"start": 412,
+					"length": 180,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						21,
+						22,
+						23,
+						24
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "977cb8e355cf3c35fde9affd6b757b6c"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "Sender",
+						"source_mapping": {
+							"start": 59,
+							"length": 634,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22,
+								23,
+								24,
+								25,
+								26,
+								27,
+								28,
+								29
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "sendEtherWithCall(address)"
+				}
+			},
+			{
+				"type": "node",
+				"name": "(sent,data) = _contract.call{value: 2000000000000000000}()",
+				"source_mapping": {
+					"start": 497,
+					"length": 67,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						22
+					],
+					"starting_column": 9,
+					"ending_column": 76,
+					"_ext_source_hash": "91e4d9cdd7e884a818cfd22439f0aa1a"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "sendEtherWithCall",
+						"source_mapping": {
+							"start": 412,
+							"length": 180,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								21,
+								22,
+								23,
+								24
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "Sender",
+								"source_mapping": {
+									"start": 59,
+									"length": 634,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_relative": "SendEther.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_short": "SendEther.sol",
+									"is_dependency": false,
+									"lines": [
+										5,
+										6,
+										7,
+										8,
+										9,
+										10,
+										11,
+										12,
+										13,
+										14,
+										15,
+										16,
+										17,
+										18,
+										19,
+										20,
+										21,
+										22,
+										23,
+										24,
+										25,
+										26,
+										27,
+										28,
+										29
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "sendEtherWithCall(address)"
+						}
+					}
+				}
+			}
+		],
+		"description": "Low level call in Sender.sendEtherWithCall(address) (SendEther.sol#21-24):\n\t- (sent,data) = _contract.call{value: 2000000000000000000}() (SendEther.sol#22)\n",
+		"markdown": "Low level call in [Sender.sendEtherWithCall(address)](SendEther.sol#L21-L24):\n\t- [(sent,data) = _contract.call{value: 2000000000000000000}()](SendEther.sol#L22)\n",
+		"first_markdown_element": "SendEther.sol#L21-L24",
+		"id": "c475823ebf4df068dad77b6550e36d71b8b912d62f4a063831ac4e6f4df2f736",
+		"check": "low-level-calls",
+		"impact": "Informational",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "attack",
+				"source_mapping": {
+					"start": 973,
+					"length": 126,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						47,
+						48,
+						49
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "ed28a856cb6cc767aac937726ef0c382"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "Receiver",
+						"source_mapping": {
+							"start": 695,
+							"length": 505,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								31,
+								32,
+								33,
+								34,
+								35,
+								36,
+								37,
+								38,
+								39,
+								40,
+								41,
+								42,
+								43,
+								44,
+								45,
+								46,
+								47,
+								48,
+								49,
+								50,
+								51,
+								52,
+								53,
+								54
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "attack()"
+				}
+			},
+			{
+				"type": "node",
+				"name": "_target.call(abi.encodeWithSignature(sendEtherWithCall(address),address(this)))",
+				"source_mapping": {
+					"start": 1010,
+					"length": 82,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						48
+					],
+					"starting_column": 9,
+					"ending_column": 91,
+					"_ext_source_hash": "d3ded214185dad2e3c9c748f4d2ca4a3"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "attack",
+						"source_mapping": {
+							"start": 973,
+							"length": 126,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								47,
+								48,
+								49
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "Receiver",
+								"source_mapping": {
+									"start": 695,
+									"length": 505,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_relative": "SendEther.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_short": "SendEther.sol",
+									"is_dependency": false,
+									"lines": [
+										31,
+										32,
+										33,
+										34,
+										35,
+										36,
+										37,
+										38,
+										39,
+										40,
+										41,
+										42,
+										43,
+										44,
+										45,
+										46,
+										47,
+										48,
+										49,
+										50,
+										51,
+										52,
+										53,
+										54
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "attack()"
+						}
+					}
+				}
+			}
+		],
+		"description": "Low level call in Receiver.attack() (SendEther.sol#47-49):\n\t- _target.call(abi.encodeWithSignature(sendEtherWithCall(address),address(this))) (SendEther.sol#48)\n",
+		"markdown": "Low level call in [Receiver.attack()](SendEther.sol#L47-L49):\n\t- [_target.call(abi.encodeWithSignature(sendEtherWithCall(address),address(this)))](SendEther.sol#L48)\n",
+		"first_markdown_element": "SendEther.sol#L47-L49",
+		"id": "6bcffbf732be0a8b660948580b364a773bbf84ef68e62e13f6d6942a42b251c6",
+		"check": "low-level-calls",
+		"impact": "Informational",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "variable",
+				"name": "_contract",
+				"source_mapping": {
+					"start": 149,
+					"length": 25,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						11
+					],
+					"starting_column": 36,
+					"ending_column": 61,
+					"_ext_source_hash": "21765653964ac7ce2a98fb57d593f170"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "sendEtherWithTransfer",
+						"source_mapping": {
+							"start": 118,
+							"length": 109,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								11,
+								12,
+								13
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "Sender",
+								"source_mapping": {
+									"start": 59,
+									"length": 634,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_relative": "SendEther.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_short": "SendEther.sol",
+									"is_dependency": false,
+									"lines": [
+										5,
+										6,
+										7,
+										8,
+										9,
+										10,
+										11,
+										12,
+										13,
+										14,
+										15,
+										16,
+										17,
+										18,
+										19,
+										20,
+										21,
+										22,
+										23,
+										24,
+										25,
+										26,
+										27,
+										28,
+										29
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "sendEtherWithTransfer(address)"
+						}
+					}
+				},
+				"additional_fields": {
+					"target": "parameter",
+					"convention": "mixedCase"
+				}
+			}
+		],
+		"description": "Parameter Sender.sendEtherWithTransfer(address)._contract (SendEther.sol#11) is not in mixedCase\n",
+		"markdown": "Parameter [Sender.sendEtherWithTransfer(address)._contract](SendEther.sol#L11) is not in mixedCase\n",
+		"first_markdown_element": "SendEther.sol#L11",
+		"id": "5ebba4759edf0577d071c868093244ae532e96c0a2893df8d1d5dfaa8eb8a87f",
+		"check": "naming-convention",
+		"impact": "Informational",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "variable",
+				"name": "_contract",
+				"source_mapping": {
+					"start": 260,
+					"length": 25,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						15
+					],
+					"starting_column": 32,
+					"ending_column": 57,
+					"_ext_source_hash": "21765653964ac7ce2a98fb57d593f170"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "sendEtherWithSend",
+						"source_mapping": {
+							"start": 233,
+							"length": 173,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								15,
+								16,
+								17,
+								18,
+								19
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "Sender",
+								"source_mapping": {
+									"start": 59,
+									"length": 634,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_relative": "SendEther.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_short": "SendEther.sol",
+									"is_dependency": false,
+									"lines": [
+										5,
+										6,
+										7,
+										8,
+										9,
+										10,
+										11,
+										12,
+										13,
+										14,
+										15,
+										16,
+										17,
+										18,
+										19,
+										20,
+										21,
+										22,
+										23,
+										24,
+										25,
+										26,
+										27,
+										28,
+										29
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "sendEtherWithSend(address)"
+						}
+					}
+				},
+				"additional_fields": {
+					"target": "parameter",
+					"convention": "mixedCase"
+				}
+			}
+		],
+		"description": "Parameter Sender.sendEtherWithSend(address)._contract (SendEther.sol#15) is not in mixedCase\n",
+		"markdown": "Parameter [Sender.sendEtherWithSend(address)._contract](SendEther.sol#L15) is not in mixedCase\n",
+		"first_markdown_element": "SendEther.sol#L15",
+		"id": "371b1cc23bb208d681e2f3864d0e2156669c9ea23ddae4a96729efb44f7d2027",
+		"check": "naming-convention",
+		"impact": "Informational",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "variable",
+				"name": "_contract",
+				"source_mapping": {
+					"start": 439,
+					"length": 25,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						21
+					],
+					"starting_column": 32,
+					"ending_column": 57,
+					"_ext_source_hash": "21765653964ac7ce2a98fb57d593f170"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "sendEtherWithCall",
+						"source_mapping": {
+							"start": 412,
+							"length": 180,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								21,
+								22,
+								23,
+								24
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "Sender",
+								"source_mapping": {
+									"start": 59,
+									"length": 634,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_relative": "SendEther.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+									"filename_short": "SendEther.sol",
+									"is_dependency": false,
+									"lines": [
+										5,
+										6,
+										7,
+										8,
+										9,
+										10,
+										11,
+										12,
+										13,
+										14,
+										15,
+										16,
+										17,
+										18,
+										19,
+										20,
+										21,
+										22,
+										23,
+										24,
+										25,
+										26,
+										27,
+										28,
+										29
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "sendEtherWithCall(address)"
+						}
+					}
+				},
+				"additional_fields": {
+					"target": "parameter",
+					"convention": "mixedCase"
+				}
+			}
+		],
+		"description": "Parameter Sender.sendEtherWithCall(address)._contract (SendEther.sol#21) is not in mixedCase\n",
+		"markdown": "Parameter [Sender.sendEtherWithCall(address)._contract](SendEther.sol#L21) is not in mixedCase\n",
+		"first_markdown_element": "SendEther.sol#L21",
+		"id": "34087a6b5bf0864e324c3ba85f819f06131e9076cf3e5909c1a3ed3c4218fa34",
+		"check": "naming-convention",
+		"impact": "Informational",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "variable",
+				"name": "_target",
+				"source_mapping": {
+					"start": 720,
+					"length": 15,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						33
+					],
+					"starting_column": 5,
+					"ending_column": 20,
+					"_ext_source_hash": "77ba7b285563daca63507b2dbc2c6e52"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "Receiver",
+						"source_mapping": {
+							"start": 695,
+							"length": 505,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								31,
+								32,
+								33,
+								34,
+								35,
+								36,
+								37,
+								38,
+								39,
+								40,
+								41,
+								42,
+								43,
+								44,
+								45,
+								46,
+								47,
+								48,
+								49,
+								50,
+								51,
+								52,
+								53,
+								54
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					}
+				},
+				"additional_fields": {
+					"target": "variable",
+					"convention": "mixedCase"
+				}
+			}
+		],
+		"description": "Variable Receiver._target (SendEther.sol#33) is not in mixedCase\n",
+		"markdown": "Variable [Receiver._target](SendEther.sol#L33) is not in mixedCase\n",
+		"first_markdown_element": "SendEther.sol#L33",
+		"id": "510201faeb7e5e3abec0884ca8545d888032109cb26479f1b561deb61bc35f68",
+		"check": "naming-convention",
+		"impact": "Informational",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "variable",
+				"name": "_lastsender",
+				"source_mapping": {
+					"start": 741,
+					"length": 19,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						34
+					],
+					"starting_column": 5,
+					"ending_column": 24,
+					"_ext_source_hash": "f8fd794a128569d40d345cf6576faef2"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "Receiver",
+						"source_mapping": {
+							"start": 695,
+							"length": 505,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								31,
+								32,
+								33,
+								34,
+								35,
+								36,
+								37,
+								38,
+								39,
+								40,
+								41,
+								42,
+								43,
+								44,
+								45,
+								46,
+								47,
+								48,
+								49,
+								50,
+								51,
+								52,
+								53,
+								54
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					}
+				},
+				"additional_fields": {
+					"target": "variable",
+					"convention": "mixedCase"
+				}
+			}
+		],
+		"description": "Variable Receiver._lastsender (SendEther.sol#34) is not in mixedCase\n",
+		"markdown": "Variable [Receiver._lastsender](SendEther.sol#L34) is not in mixedCase\n",
+		"first_markdown_element": "SendEther.sol#L34",
+		"id": "6eac768374c3760ac8fff366554c98003b2c40c8f7da4c810a4ddf6c919cbd91",
+		"check": "naming-convention",
+		"impact": "Informational",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "sendEtherWithTransfer",
+				"source_mapping": {
+					"start": 118,
+					"length": 109,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						11,
+						12,
+						13
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "52891bff3705f3691ce84b390e6de664"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "Sender",
+						"source_mapping": {
+							"start": 59,
+							"length": 634,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22,
+								23,
+								24,
+								25,
+								26,
+								27,
+								28,
+								29
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "sendEtherWithTransfer(address)"
+				}
+			}
+		],
+		"description": "sendEtherWithTransfer(address) should be declared external:\n\t- Sender.sendEtherWithTransfer(address) (SendEther.sol#11-13)\n",
+		"markdown": "sendEtherWithTransfer(address) should be declared external:\n\t- [Sender.sendEtherWithTransfer(address)](SendEther.sol#L11-L13)\n",
+		"first_markdown_element": "SendEther.sol#L11-L13",
+		"id": "282d76aeb4195184e26a5c5afe9605d9ea8e3a85d05bde8055449b77487befbc",
+		"check": "external-function",
+		"impact": "Optimization",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "sendEtherWithSend",
+				"source_mapping": {
+					"start": 233,
+					"length": 173,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						15,
+						16,
+						17,
+						18,
+						19
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "4207dcab6358f3d245397acb3d2285a0"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "Sender",
+						"source_mapping": {
+							"start": 59,
+							"length": 634,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22,
+								23,
+								24,
+								25,
+								26,
+								27,
+								28,
+								29
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "sendEtherWithSend(address)"
+				}
+			}
+		],
+		"description": "sendEtherWithSend(address) should be declared external:\n\t- Sender.sendEtherWithSend(address) (SendEther.sol#15-19)\n",
+		"markdown": "sendEtherWithSend(address) should be declared external:\n\t- [Sender.sendEtherWithSend(address)](SendEther.sol#L15-L19)\n",
+		"first_markdown_element": "SendEther.sol#L15-L19",
+		"id": "73925a0d0a09bcb5e7e555e90b6223963cc9c576c154ec2a7ba1889f5e225da7",
+		"check": "external-function",
+		"impact": "Optimization",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "sendEtherWithCall",
+				"source_mapping": {
+					"start": 412,
+					"length": 180,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						21,
+						22,
+						23,
+						24
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "977cb8e355cf3c35fde9affd6b757b6c"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "Sender",
+						"source_mapping": {
+							"start": 59,
+							"length": 634,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22,
+								23,
+								24,
+								25,
+								26,
+								27,
+								28,
+								29
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "sendEtherWithCall(address)"
+				}
+			}
+		],
+		"description": "sendEtherWithCall(address) should be declared external:\n\t- Sender.sendEtherWithCall(address) (SendEther.sol#21-24)\n",
+		"markdown": "sendEtherWithCall(address) should be declared external:\n\t- [Sender.sendEtherWithCall(address)](SendEther.sol#L21-L24)\n",
+		"first_markdown_element": "SendEther.sol#L21-L24",
+		"id": "dd94cc2889b6add76798c9fd4c5b2529ceee16825c39569a9d196c693ba642e0",
+		"check": "external-function",
+		"impact": "Optimization",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "getBalance",
+				"source_mapping": {
+					"start": 598,
+					"length": 93,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						26,
+						27,
+						28
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "286e5fd18757d0adc2230f02e2930641"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "Sender",
+						"source_mapping": {
+							"start": 59,
+							"length": 634,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22,
+								23,
+								24,
+								25,
+								26,
+								27,
+								28,
+								29
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "getBalance()"
+				}
+			}
+		],
+		"description": "getBalance() should be declared external:\n\t- Sender.getBalance() (SendEther.sol#26-28)\n",
+		"markdown": "getBalance() should be declared external:\n\t- [Sender.getBalance()](SendEther.sol#L26-L28)\n",
+		"first_markdown_element": "SendEther.sol#L26-L28",
+		"id": "083508b0331b2f97e7b1b563ca4f18be8e699406ea8917aba22fe25994b155b6",
+		"check": "external-function",
+		"impact": "Optimization",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "getBalance",
+				"source_mapping": {
+					"start": 1105,
+					"length": 93,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_relative": "SendEther.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+					"filename_short": "SendEther.sol",
+					"is_dependency": false,
+					"lines": [
+						51,
+						52,
+						53
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "286e5fd18757d0adc2230f02e2930641"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "Receiver",
+						"source_mapping": {
+							"start": 695,
+							"length": 505,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_relative": "SendEther.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/SendEther.sol",
+							"filename_short": "SendEther.sol",
+							"is_dependency": false,
+							"lines": [
+								31,
+								32,
+								33,
+								34,
+								35,
+								36,
+								37,
+								38,
+								39,
+								40,
+								41,
+								42,
+								43,
+								44,
+								45,
+								46,
+								47,
+								48,
+								49,
+								50,
+								51,
+								52,
+								53,
+								54
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "getBalance()"
+				}
+			}
+		],
+		"description": "getBalance() should be declared external:\n\t- Receiver.getBalance() (SendEther.sol#51-53)\n",
+		"markdown": "getBalance() should be declared external:\n\t- [Receiver.getBalance()](SendEther.sol#L51-L53)\n",
+		"first_markdown_element": "SendEther.sol#L51-L53",
+		"id": "06668e98ab3ccbb1cde3ab909badfa8ce7c2992ef64e63e44de072fc59918f99",
+		"check": "external-function",
+		"impact": "Optimization",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "pragma",
+				"name": "^0.8.11",
+				"source_mapping": {
+					"start": 37,
+					"length": 24,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithTransfer.sol",
+					"filename_relative": "DepositFundsWithTransfer.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithTransfer.sol",
+					"filename_short": "DepositFundsWithTransfer.sol",
+					"is_dependency": false,
+					"lines": [
+						3
+					],
+					"starting_column": 1,
+					"ending_column": 25,
+					"_ext_source_hash": "be1324aef2812fb86cbcdbdc1ff9536f"
+				},
+				"type_specific_fields": {
+					"directive": [
+						"solidity",
+						"^",
+						"0.8",
+						".11"
+					]
+				}
+			}
+		],
+		"description": "Pragma version^0.8.11 (DepositFundsWithTransfer.sol#3) necessitates a version too recent to be trusted. Consider deploying with 0.6.12/0.7.6/0.8.7\n",
+		"markdown": "Pragma version[^0.8.11](DepositFundsWithTransfer.sol#L3) necessitates a version too recent to be trusted. Consider deploying with 0.6.12/0.7.6/0.8.7\n",
+		"first_markdown_element": "DepositFundsWithTransfer.sol#L3",
+		"id": "0700645900cd47bd1d9129c740da98f5c1634e804357f14e3bc47c3e62d1bba1",
+		"check": "solc-version",
+		"impact": "Informational",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "withdraw",
+				"source_mapping": {
+					"start": 229,
+					"length": 241,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithTransfer.sol",
+					"filename_relative": "DepositFundsWithTransfer.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithTransfer.sol",
+					"filename_short": "DepositFundsWithTransfer.sol",
+					"is_dependency": false,
+					"lines": [
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "b6c61333039393759f016d30e9e31295"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "DepositFunds",
+						"source_mapping": {
+							"start": 64,
+							"length": 408,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithTransfer.sol",
+							"filename_relative": "DepositFundsWithTransfer.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithTransfer.sol",
+							"filename_short": "DepositFundsWithTransfer.sol",
+							"is_dependency": false,
+							"lines": [
+								6,
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "withdraw()"
+				}
+			},
+			{
+				"type": "node",
+				"name": "address(msg.sender).transfer(bal)",
+				"source_mapping": {
+					"start": 334,
+					"length": 33,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithTransfer.sol",
+					"filename_relative": "DepositFundsWithTransfer.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithTransfer.sol",
+					"filename_short": "DepositFundsWithTransfer.sol",
+					"is_dependency": false,
+					"lines": [
+						17
+					],
+					"starting_column": 9,
+					"ending_column": 42,
+					"_ext_source_hash": "881a2b56314ffe5322f0b755f5146a33"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "withdraw",
+						"source_mapping": {
+							"start": 229,
+							"length": 241,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithTransfer.sol",
+							"filename_relative": "DepositFundsWithTransfer.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithTransfer.sol",
+							"filename_short": "DepositFundsWithTransfer.sol",
+							"is_dependency": false,
+							"lines": [
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "DepositFunds",
+								"source_mapping": {
+									"start": 64,
+									"length": 408,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithTransfer.sol",
+									"filename_relative": "DepositFundsWithTransfer.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithTransfer.sol",
+									"filename_short": "DepositFundsWithTransfer.sol",
+									"is_dependency": false,
+									"lines": [
+										6,
+										7,
+										8,
+										9,
+										10,
+										11,
+										12,
+										13,
+										14,
+										15,
+										16,
+										17,
+										18,
+										19,
+										20,
+										21
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "withdraw()"
+						}
+					}
+				},
+				"additional_fields": {
+					"underlying_type": "external_calls"
+				}
+			},
+			{
+				"type": "node",
+				"name": "balances[msg.sender] = 0",
+				"source_mapping": {
+					"start": 439,
+					"length": 24,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithTransfer.sol",
+					"filename_relative": "DepositFundsWithTransfer.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithTransfer.sol",
+					"filename_short": "DepositFundsWithTransfer.sol",
+					"is_dependency": false,
+					"lines": [
+						19
+					],
+					"starting_column": 9,
+					"ending_column": 33,
+					"_ext_source_hash": "d3f38d1477d8e1f1d62f7dd28ed44f03"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "withdraw",
+						"source_mapping": {
+							"start": 229,
+							"length": 241,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithTransfer.sol",
+							"filename_relative": "DepositFundsWithTransfer.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithTransfer.sol",
+							"filename_short": "DepositFundsWithTransfer.sol",
+							"is_dependency": false,
+							"lines": [
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "DepositFunds",
+								"source_mapping": {
+									"start": 64,
+									"length": 408,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithTransfer.sol",
+									"filename_relative": "DepositFundsWithTransfer.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithTransfer.sol",
+									"filename_short": "DepositFundsWithTransfer.sol",
+									"is_dependency": false,
+									"lines": [
+										6,
+										7,
+										8,
+										9,
+										10,
+										11,
+										12,
+										13,
+										14,
+										15,
+										16,
+										17,
+										18,
+										19,
+										20,
+										21
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "withdraw()"
+						}
+					}
+				},
+				"additional_fields": {
+					"underlying_type": "variables_written",
+					"variable_name": "balances"
+				}
+			}
+		],
+		"description": "Reentrancy in DepositFunds.withdraw() (DepositFundsWithTransfer.sol#13-20):\n\tExternal calls:\n\t- address(msg.sender).transfer(bal) (DepositFundsWithTransfer.sol#17)\n\tState variables written after the call(s):\n\t- balances[msg.sender] = 0 (DepositFundsWithTransfer.sol#19)\n",
+		"markdown": "Reentrancy in [DepositFunds.withdraw()](DepositFundsWithTransfer.sol#L13-L20):\n\tExternal calls:\n\t- [address(msg.sender).transfer(bal)](DepositFundsWithTransfer.sol#L17)\n\tState variables written after the call(s):\n\t- [balances[msg.sender] = 0](DepositFundsWithTransfer.sol#L19)\n",
+		"first_markdown_element": "DepositFundsWithTransfer.sol#L13-L20",
+		"id": "8a480c96734a640fc6df408159d4cea68aed1f1ad68893a8eca4fa983c06244e",
+		"check": "reentrancy-unlimited-gas",
+		"impact": "Informational",
+		"confidence": "Medium"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "deposit",
+				"source_mapping": {
+					"start": 139,
+					"length": 84,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithTransfer.sol",
+					"filename_relative": "DepositFundsWithTransfer.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithTransfer.sol",
+					"filename_short": "DepositFundsWithTransfer.sol",
+					"is_dependency": false,
+					"lines": [
+						9,
+						10,
+						11
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "520cee89a421194ced74f8d4206d7094"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "DepositFunds",
+						"source_mapping": {
+							"start": 64,
+							"length": 408,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithTransfer.sol",
+							"filename_relative": "DepositFundsWithTransfer.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithTransfer.sol",
+							"filename_short": "DepositFundsWithTransfer.sol",
+							"is_dependency": false,
+							"lines": [
+								6,
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "deposit()"
+				}
+			}
+		],
+		"description": "deposit() should be declared external:\n\t- DepositFunds.deposit() (DepositFundsWithTransfer.sol#9-11)\n",
+		"markdown": "deposit() should be declared external:\n\t- [DepositFunds.deposit()](DepositFundsWithTransfer.sol#L9-L11)\n",
+		"first_markdown_element": "DepositFundsWithTransfer.sol#L9-L11",
+		"id": "232b02df4397a97bba97072caf73b50ca52bbfa4418c2f9fc80b397a2b805710",
+		"check": "external-function",
+		"impact": "Optimization",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "withdraw",
+				"source_mapping": {
+					"start": 229,
+					"length": 241,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithTransfer.sol",
+					"filename_relative": "DepositFundsWithTransfer.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithTransfer.sol",
+					"filename_short": "DepositFundsWithTransfer.sol",
+					"is_dependency": false,
+					"lines": [
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "b6c61333039393759f016d30e9e31295"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "DepositFunds",
+						"source_mapping": {
+							"start": 64,
+							"length": 408,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithTransfer.sol",
+							"filename_relative": "DepositFundsWithTransfer.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithTransfer.sol",
+							"filename_short": "DepositFundsWithTransfer.sol",
+							"is_dependency": false,
+							"lines": [
+								6,
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "withdraw()"
+				}
+			}
+		],
+		"description": "withdraw() should be declared external:\n\t- DepositFunds.withdraw() (DepositFundsWithTransfer.sol#13-20)\n",
+		"markdown": "withdraw() should be declared external:\n\t- [DepositFunds.withdraw()](DepositFundsWithTransfer.sol#L13-L20)\n",
+		"first_markdown_element": "DepositFundsWithTransfer.sol#L13-L20",
+		"id": "71b6c2797bf30d41f08046f3f036e33692c0c31d10ad9a91a3f15a177447766c",
+		"check": "external-function",
+		"impact": "Optimization",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "pragma",
+				"name": "^0.8.11",
+				"source_mapping": {
+					"start": 37,
+					"length": 24,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithSend.sol",
+					"filename_relative": "DepositFundsWithSend.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithSend.sol",
+					"filename_short": "DepositFundsWithSend.sol",
+					"is_dependency": false,
+					"lines": [
+						3
+					],
+					"starting_column": 1,
+					"ending_column": 25,
+					"_ext_source_hash": "be1324aef2812fb86cbcdbdc1ff9536f"
+				},
+				"type_specific_fields": {
+					"directive": [
+						"solidity",
+						"^",
+						"0.8",
+						".11"
+					]
+				}
+			}
+		],
+		"description": "Pragma version^0.8.11 (DepositFundsWithSend.sol#3) necessitates a version too recent to be trusted. Consider deploying with 0.6.12/0.7.6/0.8.7\n",
+		"markdown": "Pragma version[^0.8.11](DepositFundsWithSend.sol#L3) necessitates a version too recent to be trusted. Consider deploying with 0.6.12/0.7.6/0.8.7\n",
+		"first_markdown_element": "DepositFundsWithSend.sol#L3",
+		"id": "e2d9ef3adb5efd57828e828e1e0a2fc5f871d7ad0b9ef3dfd14c03406f784d41",
+		"check": "solc-version",
+		"impact": "Informational",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "withdraw",
+				"source_mapping": {
+					"start": 229,
+					"length": 281,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithSend.sol",
+					"filename_relative": "DepositFundsWithSend.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithSend.sol",
+					"filename_short": "DepositFundsWithSend.sol",
+					"is_dependency": false,
+					"lines": [
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "8fb5e10bcd11c99e1962238be701f089"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "DepositFunds",
+						"source_mapping": {
+							"start": 64,
+							"length": 448,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithSend.sol",
+							"filename_relative": "DepositFundsWithSend.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithSend.sol",
+							"filename_short": "DepositFundsWithSend.sol",
+							"is_dependency": false,
+							"lines": [
+								6,
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "withdraw()"
+				}
+			},
+			{
+				"type": "node",
+				"name": "sent = address(msg.sender).send(bal)",
+				"source_mapping": {
+					"start": 334,
+					"length": 41,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithSend.sol",
+					"filename_relative": "DepositFundsWithSend.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithSend.sol",
+					"filename_short": "DepositFundsWithSend.sol",
+					"is_dependency": false,
+					"lines": [
+						17
+					],
+					"starting_column": 9,
+					"ending_column": 50,
+					"_ext_source_hash": "935074f58eccc10092c52d5e83171aff"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "withdraw",
+						"source_mapping": {
+							"start": 229,
+							"length": 281,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithSend.sol",
+							"filename_relative": "DepositFundsWithSend.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithSend.sol",
+							"filename_short": "DepositFundsWithSend.sol",
+							"is_dependency": false,
+							"lines": [
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "DepositFunds",
+								"source_mapping": {
+									"start": 64,
+									"length": 448,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithSend.sol",
+									"filename_relative": "DepositFundsWithSend.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithSend.sol",
+									"filename_short": "DepositFundsWithSend.sol",
+									"is_dependency": false,
+									"lines": [
+										6,
+										7,
+										8,
+										9,
+										10,
+										11,
+										12,
+										13,
+										14,
+										15,
+										16,
+										17,
+										18,
+										19,
+										20,
+										21,
+										22
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "withdraw()"
+						}
+					}
+				},
+				"additional_fields": {
+					"underlying_type": "external_calls"
+				}
+			},
+			{
+				"type": "node",
+				"name": "balances[msg.sender] = 0",
+				"source_mapping": {
+					"start": 479,
+					"length": 24,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithSend.sol",
+					"filename_relative": "DepositFundsWithSend.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithSend.sol",
+					"filename_short": "DepositFundsWithSend.sol",
+					"is_dependency": false,
+					"lines": [
+						20
+					],
+					"starting_column": 9,
+					"ending_column": 33,
+					"_ext_source_hash": "d3f38d1477d8e1f1d62f7dd28ed44f03"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "withdraw",
+						"source_mapping": {
+							"start": 229,
+							"length": 281,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithSend.sol",
+							"filename_relative": "DepositFundsWithSend.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithSend.sol",
+							"filename_short": "DepositFundsWithSend.sol",
+							"is_dependency": false,
+							"lines": [
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "DepositFunds",
+								"source_mapping": {
+									"start": 64,
+									"length": 448,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithSend.sol",
+									"filename_relative": "DepositFundsWithSend.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithSend.sol",
+									"filename_short": "DepositFundsWithSend.sol",
+									"is_dependency": false,
+									"lines": [
+										6,
+										7,
+										8,
+										9,
+										10,
+										11,
+										12,
+										13,
+										14,
+										15,
+										16,
+										17,
+										18,
+										19,
+										20,
+										21,
+										22
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "withdraw()"
+						}
+					}
+				},
+				"additional_fields": {
+					"underlying_type": "variables_written",
+					"variable_name": "balances"
+				}
+			}
+		],
+		"description": "Reentrancy in DepositFunds.withdraw() (DepositFundsWithSend.sol#13-21):\n\tExternal calls:\n\t- sent = address(msg.sender).send(bal) (DepositFundsWithSend.sol#17)\n\tState variables written after the call(s):\n\t- balances[msg.sender] = 0 (DepositFundsWithSend.sol#20)\n",
+		"markdown": "Reentrancy in [DepositFunds.withdraw()](DepositFundsWithSend.sol#L13-L21):\n\tExternal calls:\n\t- [sent = address(msg.sender).send(bal)](DepositFundsWithSend.sol#L17)\n\tState variables written after the call(s):\n\t- [balances[msg.sender] = 0](DepositFundsWithSend.sol#L20)\n",
+		"first_markdown_element": "DepositFundsWithSend.sol#L13-L21",
+		"id": "a570d5bfc1eee9224d4dbc962ccce32ccbf9dc2c53322a7191f9a815a982a7b3",
+		"check": "reentrancy-unlimited-gas",
+		"impact": "Informational",
+		"confidence": "Medium"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "deposit",
+				"source_mapping": {
+					"start": 139,
+					"length": 84,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithSend.sol",
+					"filename_relative": "DepositFundsWithSend.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithSend.sol",
+					"filename_short": "DepositFundsWithSend.sol",
+					"is_dependency": false,
+					"lines": [
+						9,
+						10,
+						11
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "520cee89a421194ced74f8d4206d7094"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "DepositFunds",
+						"source_mapping": {
+							"start": 64,
+							"length": 448,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithSend.sol",
+							"filename_relative": "DepositFundsWithSend.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithSend.sol",
+							"filename_short": "DepositFundsWithSend.sol",
+							"is_dependency": false,
+							"lines": [
+								6,
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "deposit()"
+				}
+			}
+		],
+		"description": "deposit() should be declared external:\n\t- DepositFunds.deposit() (DepositFundsWithSend.sol#9-11)\n",
+		"markdown": "deposit() should be declared external:\n\t- [DepositFunds.deposit()](DepositFundsWithSend.sol#L9-L11)\n",
+		"first_markdown_element": "DepositFundsWithSend.sol#L9-L11",
+		"id": "232b02df4397a97bba97072caf73b50ca52bbfa4418c2f9fc80b397a2b805710",
+		"check": "external-function",
+		"impact": "Optimization",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "withdraw",
+				"source_mapping": {
+					"start": 229,
+					"length": 281,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithSend.sol",
+					"filename_relative": "DepositFundsWithSend.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithSend.sol",
+					"filename_short": "DepositFundsWithSend.sol",
+					"is_dependency": false,
+					"lines": [
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "8fb5e10bcd11c99e1962238be701f089"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "DepositFunds",
+						"source_mapping": {
+							"start": 64,
+							"length": 448,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithSend.sol",
+							"filename_relative": "DepositFundsWithSend.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithSend.sol",
+							"filename_short": "DepositFundsWithSend.sol",
+							"is_dependency": false,
+							"lines": [
+								6,
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "withdraw()"
+				}
+			}
+		],
+		"description": "withdraw() should be declared external:\n\t- DepositFunds.withdraw() (DepositFundsWithSend.sol#13-21)\n",
+		"markdown": "withdraw() should be declared external:\n\t- [DepositFunds.withdraw()](DepositFundsWithSend.sol#L13-L21)\n",
+		"first_markdown_element": "DepositFundsWithSend.sol#L13-L21",
+		"id": "71b6c2797bf30d41f08046f3f036e33692c0c31d10ad9a91a3f15a177447766c",
+		"check": "external-function",
+		"impact": "Optimization",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "pragma",
+				"name": "^0.8.11",
+				"source_mapping": {
+					"start": 97,
+					"length": 24,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/ReentrancyGuard.sol",
+					"filename_relative": "ReentrancyGuard.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/ReentrancyGuard.sol",
+					"filename_short": "ReentrancyGuard.sol",
+					"is_dependency": false,
+					"lines": [
+						4
+					],
+					"starting_column": 1,
+					"ending_column": 25,
+					"_ext_source_hash": "be1324aef2812fb86cbcdbdc1ff9536f"
+				},
+				"type_specific_fields": {
+					"directive": [
+						"solidity",
+						"^",
+						"0.8",
+						".11"
+					]
+				}
+			}
+		],
+		"description": "Pragma version^0.8.11 (ReentrancyGuard.sol#4) necessitates a version too recent to be trusted. Consider deploying with 0.6.12/0.7.6/0.8.7\n",
+		"markdown": "Pragma version[^0.8.11](ReentrancyGuard.sol#L4) necessitates a version too recent to be trusted. Consider deploying with 0.6.12/0.7.6/0.8.7\n",
+		"first_markdown_element": "ReentrancyGuard.sol#L4",
+		"id": "69ee6c13620532514d88723108ee6c3497cdf7d78b5786c1f8d44c6b0ddc8fb1",
+		"check": "solc-version",
+		"impact": "Informational",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "withdraw",
+				"source_mapping": {
+					"start": 229,
+					"length": 267,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+					"filename_relative": "DepositFundsWithCall.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+					"filename_short": "DepositFundsWithCall.sol",
+					"is_dependency": false,
+					"lines": [
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "4ff1c9973c1a712353e737cddb11d7ac"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "DepositFunds",
+						"source_mapping": {
+							"start": 64,
+							"length": 434,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+							"filename_relative": "DepositFundsWithCall.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+							"filename_short": "DepositFundsWithCall.sol",
+							"is_dependency": false,
+							"lines": [
+								6,
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "withdraw()"
+				}
+			},
+			{
+				"type": "node",
+				"name": "(sent) = msg.sender.call{value: bal}()",
+				"source_mapping": {
+					"start": 342,
+					"length": 47,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+					"filename_relative": "DepositFundsWithCall.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+					"filename_short": "DepositFundsWithCall.sol",
+					"is_dependency": false,
+					"lines": [
+						17
+					],
+					"starting_column": 9,
+					"ending_column": 56,
+					"_ext_source_hash": "0633e0af34d907889b82ec756041f3a4"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "withdraw",
+						"source_mapping": {
+							"start": 229,
+							"length": 267,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+							"filename_relative": "DepositFundsWithCall.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+							"filename_short": "DepositFundsWithCall.sol",
+							"is_dependency": false,
+							"lines": [
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "DepositFunds",
+								"source_mapping": {
+									"start": 64,
+									"length": 434,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+									"filename_relative": "DepositFundsWithCall.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+									"filename_short": "DepositFundsWithCall.sol",
+									"is_dependency": false,
+									"lines": [
+										6,
+										7,
+										8,
+										9,
+										10,
+										11,
+										12,
+										13,
+										14,
+										15,
+										16,
+										17,
+										18,
+										19,
+										20,
+										21,
+										22
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "withdraw()"
+						}
+					}
+				},
+				"additional_fields": {
+					"underlying_type": "external_calls"
+				}
+			},
+			{
+				"type": "node",
+				"name": "balances[msg.sender] = 0",
+				"source_mapping": {
+					"start": 465,
+					"length": 24,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+					"filename_relative": "DepositFundsWithCall.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+					"filename_short": "DepositFundsWithCall.sol",
+					"is_dependency": false,
+					"lines": [
+						20
+					],
+					"starting_column": 9,
+					"ending_column": 33,
+					"_ext_source_hash": "d3f38d1477d8e1f1d62f7dd28ed44f03"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "withdraw",
+						"source_mapping": {
+							"start": 229,
+							"length": 267,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+							"filename_relative": "DepositFundsWithCall.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+							"filename_short": "DepositFundsWithCall.sol",
+							"is_dependency": false,
+							"lines": [
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "DepositFunds",
+								"source_mapping": {
+									"start": 64,
+									"length": 434,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+									"filename_relative": "DepositFundsWithCall.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+									"filename_short": "DepositFundsWithCall.sol",
+									"is_dependency": false,
+									"lines": [
+										6,
+										7,
+										8,
+										9,
+										10,
+										11,
+										12,
+										13,
+										14,
+										15,
+										16,
+										17,
+										18,
+										19,
+										20,
+										21,
+										22
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "withdraw()"
+						}
+					}
+				},
+				"additional_fields": {
+					"underlying_type": "variables_written",
+					"variable_name": "balances"
+				}
+			}
+		],
+		"description": "Reentrancy in DepositFunds.withdraw() (DepositFundsWithCall.sol#13-21):\n\tExternal calls:\n\t- (sent) = msg.sender.call{value: bal}() (DepositFundsWithCall.sol#17)\n\tState variables written after the call(s):\n\t- balances[msg.sender] = 0 (DepositFundsWithCall.sol#20)\n",
+		"markdown": "Reentrancy in [DepositFunds.withdraw()](DepositFundsWithCall.sol#L13-L21):\n\tExternal calls:\n\t- [(sent) = msg.sender.call{value: bal}()](DepositFundsWithCall.sol#L17)\n\tState variables written after the call(s):\n\t- [balances[msg.sender] = 0](DepositFundsWithCall.sol#L20)\n",
+		"first_markdown_element": "DepositFundsWithCall.sol#L13-L21",
+		"id": "c852e8e2fae327e0f5c1884be29ea110a5a7e5722055515b8c473029d35e7943",
+		"check": "reentrancy-eth",
+		"impact": "High",
+		"confidence": "Medium"
+	},
+	{
+		"elements": [
+			{
+				"type": "pragma",
+				"name": "^0.8.11",
+				"source_mapping": {
+					"start": 37,
+					"length": 24,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+					"filename_relative": "DepositFundsWithCall.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+					"filename_short": "DepositFundsWithCall.sol",
+					"is_dependency": false,
+					"lines": [
+						3
+					],
+					"starting_column": 1,
+					"ending_column": 25,
+					"_ext_source_hash": "be1324aef2812fb86cbcdbdc1ff9536f"
+				},
+				"type_specific_fields": {
+					"directive": [
+						"solidity",
+						"^",
+						"0.8",
+						".11"
+					]
+				}
+			}
+		],
+		"description": "Pragma version^0.8.11 (DepositFundsWithCall.sol#3) necessitates a version too recent to be trusted. Consider deploying with 0.6.12/0.7.6/0.8.7\n",
+		"markdown": "Pragma version[^0.8.11](DepositFundsWithCall.sol#L3) necessitates a version too recent to be trusted. Consider deploying with 0.6.12/0.7.6/0.8.7\n",
+		"first_markdown_element": "DepositFundsWithCall.sol#L3",
+		"id": "7070202abe644a59f692fae52eb83b833ab60a31397ef18d7e3050feb361f1ff",
+		"check": "solc-version",
+		"impact": "Informational",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "withdraw",
+				"source_mapping": {
+					"start": 229,
+					"length": 267,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+					"filename_relative": "DepositFundsWithCall.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+					"filename_short": "DepositFundsWithCall.sol",
+					"is_dependency": false,
+					"lines": [
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "4ff1c9973c1a712353e737cddb11d7ac"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "DepositFunds",
+						"source_mapping": {
+							"start": 64,
+							"length": 434,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+							"filename_relative": "DepositFundsWithCall.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+							"filename_short": "DepositFundsWithCall.sol",
+							"is_dependency": false,
+							"lines": [
+								6,
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "withdraw()"
+				}
+			},
+			{
+				"type": "node",
+				"name": "(sent) = msg.sender.call{value: bal}()",
+				"source_mapping": {
+					"start": 342,
+					"length": 47,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+					"filename_relative": "DepositFundsWithCall.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+					"filename_short": "DepositFundsWithCall.sol",
+					"is_dependency": false,
+					"lines": [
+						17
+					],
+					"starting_column": 9,
+					"ending_column": 56,
+					"_ext_source_hash": "0633e0af34d907889b82ec756041f3a4"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "withdraw",
+						"source_mapping": {
+							"start": 229,
+							"length": 267,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+							"filename_relative": "DepositFundsWithCall.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+							"filename_short": "DepositFundsWithCall.sol",
+							"is_dependency": false,
+							"lines": [
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "DepositFunds",
+								"source_mapping": {
+									"start": 64,
+									"length": 434,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+									"filename_relative": "DepositFundsWithCall.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+									"filename_short": "DepositFundsWithCall.sol",
+									"is_dependency": false,
+									"lines": [
+										6,
+										7,
+										8,
+										9,
+										10,
+										11,
+										12,
+										13,
+										14,
+										15,
+										16,
+										17,
+										18,
+										19,
+										20,
+										21,
+										22
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "withdraw()"
+						}
+					}
+				}
+			}
+		],
+		"description": "Low level call in DepositFunds.withdraw() (DepositFundsWithCall.sol#13-21):\n\t- (sent) = msg.sender.call{value: bal}() (DepositFundsWithCall.sol#17)\n",
+		"markdown": "Low level call in [DepositFunds.withdraw()](DepositFundsWithCall.sol#L13-L21):\n\t- [(sent) = msg.sender.call{value: bal}()](DepositFundsWithCall.sol#L17)\n",
+		"first_markdown_element": "DepositFundsWithCall.sol#L13-L21",
+		"id": "eff50e4c2d1cbac31803f18635f1d05d86815cac85feb5064cb93d0f35ba3899",
+		"check": "low-level-calls",
+		"impact": "Informational",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "deposit",
+				"source_mapping": {
+					"start": 139,
+					"length": 84,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+					"filename_relative": "DepositFundsWithCall.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+					"filename_short": "DepositFundsWithCall.sol",
+					"is_dependency": false,
+					"lines": [
+						9,
+						10,
+						11
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "520cee89a421194ced74f8d4206d7094"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "DepositFunds",
+						"source_mapping": {
+							"start": 64,
+							"length": 434,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+							"filename_relative": "DepositFundsWithCall.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+							"filename_short": "DepositFundsWithCall.sol",
+							"is_dependency": false,
+							"lines": [
+								6,
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "deposit()"
+				}
+			}
+		],
+		"description": "deposit() should be declared external:\n\t- DepositFunds.deposit() (DepositFundsWithCall.sol#9-11)\n",
+		"markdown": "deposit() should be declared external:\n\t- [DepositFunds.deposit()](DepositFundsWithCall.sol#L9-L11)\n",
+		"first_markdown_element": "DepositFundsWithCall.sol#L9-L11",
+		"id": "232b02df4397a97bba97072caf73b50ca52bbfa4418c2f9fc80b397a2b805710",
+		"check": "external-function",
+		"impact": "Optimization",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "withdraw",
+				"source_mapping": {
+					"start": 229,
+					"length": 267,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+					"filename_relative": "DepositFundsWithCall.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+					"filename_short": "DepositFundsWithCall.sol",
+					"is_dependency": false,
+					"lines": [
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "4ff1c9973c1a712353e737cddb11d7ac"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "DepositFunds",
+						"source_mapping": {
+							"start": 64,
+							"length": 434,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+							"filename_relative": "DepositFundsWithCall.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCall.sol",
+							"filename_short": "DepositFundsWithCall.sol",
+							"is_dependency": false,
+							"lines": [
+								6,
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "withdraw()"
+				}
+			}
+		],
+		"description": "withdraw() should be declared external:\n\t- DepositFunds.withdraw() (DepositFundsWithCall.sol#13-21)\n",
+		"markdown": "withdraw() should be declared external:\n\t- [DepositFunds.withdraw()](DepositFundsWithCall.sol#L13-L21)\n",
+		"first_markdown_element": "DepositFundsWithCall.sol#L13-L21",
+		"id": "71b6c2797bf30d41f08046f3f036e33692c0c31d10ad9a91a3f15a177447766c",
+		"check": "external-function",
+		"impact": "Optimization",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "pragma",
+				"name": "^0.8.11",
+				"source_mapping": {
+					"start": 37,
+					"length": 24,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCallAndReentrantGuard.sol",
+					"filename_relative": "DepositFundsWithCallAndReentrantGuard.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCallAndReentrantGuard.sol",
+					"filename_short": "DepositFundsWithCallAndReentrantGuard.sol",
+					"is_dependency": false,
+					"lines": [
+						3
+					],
+					"starting_column": 1,
+					"ending_column": 25,
+					"_ext_source_hash": "be1324aef2812fb86cbcdbdc1ff9536f"
+				},
+				"type_specific_fields": {
+					"directive": [
+						"solidity",
+						"^",
+						"0.8",
+						".11"
+					]
+				}
+			}
+		],
+		"description": "Pragma version^0.8.11 (DepositFundsWithCallAndReentrantGuard.sol#3) necessitates a version too recent to be trusted. Consider deploying with 0.6.12/0.7.6/0.8.7\n",
+		"markdown": "Pragma version[^0.8.11](DepositFundsWithCallAndReentrantGuard.sol#L3) necessitates a version too recent to be trusted. Consider deploying with 0.6.12/0.7.6/0.8.7\n",
+		"first_markdown_element": "DepositFundsWithCallAndReentrantGuard.sol#L3",
+		"id": "706bbd122ec5343578c5ea48f2b5d1b93810f9b3e30f9259b107b9d74f61cbd3",
+		"check": "solc-version",
+		"impact": "Informational",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "withdraw",
+				"source_mapping": {
+					"start": 281,
+					"length": 278,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCallAndReentrantGuard.sol",
+					"filename_relative": "DepositFundsWithCallAndReentrantGuard.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCallAndReentrantGuard.sol",
+					"filename_short": "DepositFundsWithCallAndReentrantGuard.sol",
+					"is_dependency": false,
+					"lines": [
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "b5d774e03ff652a1bd96a9ad78cbcef3"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "DepositFunds",
+						"source_mapping": {
+							"start": 98,
+							"length": 463,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCallAndReentrantGuard.sol",
+							"filename_relative": "DepositFundsWithCallAndReentrantGuard.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCallAndReentrantGuard.sol",
+							"filename_short": "DepositFundsWithCallAndReentrantGuard.sol",
+							"is_dependency": false,
+							"lines": [
+								9,
+								10,
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22,
+								23,
+								24,
+								25
+							],
+							"starting_column": 1,
+							"ending_column": 0
+						}
+					},
+					"signature": "withdraw()"
+				}
+			},
+			{
+				"type": "node",
+				"name": "(sent) = msg.sender.call{value: bal}()",
+				"source_mapping": {
+					"start": 440,
+					"length": 47,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCallAndReentrantGuard.sol",
+					"filename_relative": "DepositFundsWithCallAndReentrantGuard.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCallAndReentrantGuard.sol",
+					"filename_short": "DepositFundsWithCallAndReentrantGuard.sol",
+					"is_dependency": false,
+					"lines": [
+						21
+					],
+					"starting_column": 9,
+					"ending_column": 56,
+					"_ext_source_hash": "0633e0af34d907889b82ec756041f3a4"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "withdraw",
+						"source_mapping": {
+							"start": 281,
+							"length": 278,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCallAndReentrantGuard.sol",
+							"filename_relative": "DepositFundsWithCallAndReentrantGuard.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCallAndReentrantGuard.sol",
+							"filename_short": "DepositFundsWithCallAndReentrantGuard.sol",
+							"is_dependency": false,
+							"lines": [
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22,
+								23
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "DepositFunds",
+								"source_mapping": {
+									"start": 98,
+									"length": 463,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCallAndReentrantGuard.sol",
+									"filename_relative": "DepositFundsWithCallAndReentrantGuard.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCallAndReentrantGuard.sol",
+									"filename_short": "DepositFundsWithCallAndReentrantGuard.sol",
+									"is_dependency": false,
+									"lines": [
+										9,
+										10,
+										11,
+										12,
+										13,
+										14,
+										15,
+										16,
+										17,
+										18,
+										19,
+										20,
+										21,
+										22,
+										23,
+										24,
+										25
+									],
+									"starting_column": 1,
+									"ending_column": 0
+								}
+							},
+							"signature": "withdraw()"
+						}
+					}
+				}
+			}
+		],
+		"description": "Low level call in DepositFunds.withdraw() (DepositFundsWithCallAndReentrantGuard.sol#16-23):\n\t- (sent) = msg.sender.call{value: bal}() (DepositFundsWithCallAndReentrantGuard.sol#21)\n",
+		"markdown": "Low level call in [DepositFunds.withdraw()](DepositFundsWithCallAndReentrantGuard.sol#L16-L23):\n\t- [(sent) = msg.sender.call{value: bal}()](DepositFundsWithCallAndReentrantGuard.sol#L21)\n",
+		"first_markdown_element": "DepositFundsWithCallAndReentrantGuard.sol#L16-L23",
+		"id": "b7d39b758ccda0a60688a0ad896b01cc70cda4a9a967b9f7ce26fe495fc3f64f",
+		"check": "low-level-calls",
+		"impact": "Informational",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "deposit",
+				"source_mapping": {
+					"start": 191,
+					"length": 84,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCallAndReentrantGuard.sol",
+					"filename_relative": "DepositFundsWithCallAndReentrantGuard.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCallAndReentrantGuard.sol",
+					"filename_short": "DepositFundsWithCallAndReentrantGuard.sol",
+					"is_dependency": false,
+					"lines": [
+						12,
+						13,
+						14
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "520cee89a421194ced74f8d4206d7094"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "DepositFunds",
+						"source_mapping": {
+							"start": 98,
+							"length": 463,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCallAndReentrantGuard.sol",
+							"filename_relative": "DepositFundsWithCallAndReentrantGuard.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCallAndReentrantGuard.sol",
+							"filename_short": "DepositFundsWithCallAndReentrantGuard.sol",
+							"is_dependency": false,
+							"lines": [
+								9,
+								10,
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22,
+								23,
+								24,
+								25
+							],
+							"starting_column": 1,
+							"ending_column": 0
+						}
+					},
+					"signature": "deposit()"
+				}
+			}
+		],
+		"description": "deposit() should be declared external:\n\t- DepositFunds.deposit() (DepositFundsWithCallAndReentrantGuard.sol#12-14)\n",
+		"markdown": "deposit() should be declared external:\n\t- [DepositFunds.deposit()](DepositFundsWithCallAndReentrantGuard.sol#L12-L14)\n",
+		"first_markdown_element": "DepositFundsWithCallAndReentrantGuard.sol#L12-L14",
+		"id": "232b02df4397a97bba97072caf73b50ca52bbfa4418c2f9fc80b397a2b805710",
+		"check": "external-function",
+		"impact": "Optimization",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "withdraw",
+				"source_mapping": {
+					"start": 281,
+					"length": 278,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCallAndReentrantGuard.sol",
+					"filename_relative": "DepositFundsWithCallAndReentrantGuard.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCallAndReentrantGuard.sol",
+					"filename_short": "DepositFundsWithCallAndReentrantGuard.sol",
+					"is_dependency": false,
+					"lines": [
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "b5d774e03ff652a1bd96a9ad78cbcef3"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "DepositFunds",
+						"source_mapping": {
+							"start": 98,
+							"length": 463,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCallAndReentrantGuard.sol",
+							"filename_relative": "DepositFundsWithCallAndReentrantGuard.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/DepositFundsWithCallAndReentrantGuard.sol",
+							"filename_short": "DepositFundsWithCallAndReentrantGuard.sol",
+							"is_dependency": false,
+							"lines": [
+								9,
+								10,
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22,
+								23,
+								24,
+								25
+							],
+							"starting_column": 1,
+							"ending_column": 0
+						}
+					},
+					"signature": "withdraw()"
+				}
+			}
+		],
+		"description": "withdraw() should be declared external:\n\t- DepositFunds.withdraw() (DepositFundsWithCallAndReentrantGuard.sol#16-23)\n",
+		"markdown": "withdraw() should be declared external:\n\t- [DepositFunds.withdraw()](DepositFundsWithCallAndReentrantGuard.sol#L16-L23)\n",
+		"first_markdown_element": "DepositFundsWithCallAndReentrantGuard.sol#L16-L23",
+		"id": "71b6c2797bf30d41f08046f3f036e33692c0c31d10ad9a91a3f15a177447766c",
+		"check": "external-function",
+		"impact": "Optimization",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "attack",
+				"source_mapping": {
+					"start": 560,
+					"length": 162,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/Attack.sol",
+					"filename_relative": "Attack.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/Attack.sol",
+					"filename_short": "Attack.sol",
+					"is_dependency": false,
+					"lines": [
+						25,
+						26,
+						27,
+						28,
+						29
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "9e4dc7de5e1109ae194affa314355713"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "Attack",
+						"source_mapping": {
+							"start": 167,
+							"length": 744,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/Attack.sol",
+							"filename_relative": "Attack.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/Attack.sol",
+							"filename_short": "Attack.sol",
+							"is_dependency": false,
+							"lines": [
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22,
+								23,
+								24,
+								25,
+								26,
+								27,
+								28,
+								29,
+								30,
+								31,
+								32,
+								33,
+								34,
+								35,
+								36,
+								37,
+								38,
+								39
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "attack()"
+				}
+			},
+			{
+				"type": "node",
+				"name": "depositFunds.deposit{value: 1000000000000000000}()",
+				"source_mapping": {
+					"start": 644,
+					"length": 38,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/Attack.sol",
+					"filename_relative": "Attack.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/Attack.sol",
+					"filename_short": "Attack.sol",
+					"is_dependency": false,
+					"lines": [
+						27
+					],
+					"starting_column": 9,
+					"ending_column": 47,
+					"_ext_source_hash": "ce89eb42e79c871eb258d4acd0d68f0b"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "attack",
+						"source_mapping": {
+							"start": 560,
+							"length": 162,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/Attack.sol",
+							"filename_relative": "Attack.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/Attack.sol",
+							"filename_short": "Attack.sol",
+							"is_dependency": false,
+							"lines": [
+								25,
+								26,
+								27,
+								28,
+								29
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "Attack",
+								"source_mapping": {
+									"start": 167,
+									"length": 744,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/Attack.sol",
+									"filename_relative": "Attack.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/Attack.sol",
+									"filename_short": "Attack.sol",
+									"is_dependency": false,
+									"lines": [
+										11,
+										12,
+										13,
+										14,
+										15,
+										16,
+										17,
+										18,
+										19,
+										20,
+										21,
+										22,
+										23,
+										24,
+										25,
+										26,
+										27,
+										28,
+										29,
+										30,
+										31,
+										32,
+										33,
+										34,
+										35,
+										36,
+										37,
+										38,
+										39
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "attack()"
+						}
+					}
+				}
+			}
+		],
+		"description": "Attack.attack() (Attack.sol#25-29) sends eth to arbitrary user\n\tDangerous calls:\n\t- depositFunds.deposit{value: 1000000000000000000}() (Attack.sol#27)\n",
+		"markdown": "[Attack.attack()](Attack.sol#L25-L29) sends eth to arbitrary user\n\tDangerous calls:\n\t- [depositFunds.deposit{value: 1000000000000000000}()](Attack.sol#L27)\n",
+		"first_markdown_element": "Attack.sol#L25-L29",
+		"id": "1f84cff52ad67f56e4b999235f69e9deefee9dee479a14631408f24bad31f565",
+		"check": "arbitrary-send",
+		"impact": "High",
+		"confidence": "Medium"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "withdraw",
+				"source_mapping": {
+					"start": 825,
+					"length": 83,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/Attack.sol",
+					"filename_relative": "Attack.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/Attack.sol",
+					"filename_short": "Attack.sol",
+					"is_dependency": false,
+					"lines": [
+						35,
+						36,
+						37
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "e0194316d3b43f0e1da5061743450fd1"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "Attack",
+						"source_mapping": {
+							"start": 167,
+							"length": 744,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/Attack.sol",
+							"filename_relative": "Attack.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/Attack.sol",
+							"filename_short": "Attack.sol",
+							"is_dependency": false,
+							"lines": [
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22,
+								23,
+								24,
+								25,
+								26,
+								27,
+								28,
+								29,
+								30,
+								31,
+								32,
+								33,
+								34,
+								35,
+								36,
+								37,
+								38,
+								39
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "withdraw()"
+				}
+			},
+			{
+				"type": "node",
+				"name": "address(msg.sender).transfer(balance())",
+				"source_mapping": {
+					"start": 862,
+					"length": 39,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/Attack.sol",
+					"filename_relative": "Attack.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/Attack.sol",
+					"filename_short": "Attack.sol",
+					"is_dependency": false,
+					"lines": [
+						36
+					],
+					"starting_column": 9,
+					"ending_column": 48,
+					"_ext_source_hash": "1503fd4fb09f81f413f7dc702c17d940"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "withdraw",
+						"source_mapping": {
+							"start": 825,
+							"length": 83,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/Attack.sol",
+							"filename_relative": "Attack.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/Attack.sol",
+							"filename_short": "Attack.sol",
+							"is_dependency": false,
+							"lines": [
+								35,
+								36,
+								37
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "Attack",
+								"source_mapping": {
+									"start": 167,
+									"length": 744,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/Attack.sol",
+									"filename_relative": "Attack.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/Attack.sol",
+									"filename_short": "Attack.sol",
+									"is_dependency": false,
+									"lines": [
+										11,
+										12,
+										13,
+										14,
+										15,
+										16,
+										17,
+										18,
+										19,
+										20,
+										21,
+										22,
+										23,
+										24,
+										25,
+										26,
+										27,
+										28,
+										29,
+										30,
+										31,
+										32,
+										33,
+										34,
+										35,
+										36,
+										37,
+										38,
+										39
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "withdraw()"
+						}
+					}
+				}
+			}
+		],
+		"description": "Attack.withdraw() (Attack.sol#35-37) sends eth to arbitrary user\n\tDangerous calls:\n\t- address(msg.sender).transfer(balance()) (Attack.sol#36)\n",
+		"markdown": "[Attack.withdraw()](Attack.sol#L35-L37) sends eth to arbitrary user\n\tDangerous calls:\n\t- [address(msg.sender).transfer(balance())](Attack.sol#L36)\n",
+		"first_markdown_element": "Attack.sol#L35-L37",
+		"id": "7321ccc6471b6dc871bbb0e0dee5321f5f0c27d7f0af05e70a023717c14daf90",
+		"check": "arbitrary-send",
+		"impact": "High",
+		"confidence": "Medium"
+	},
+	{
+		"elements": [
+			{
+				"type": "pragma",
+				"name": "^0.8.11",
+				"source_mapping": {
+					"start": 37,
+					"length": 24,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/Attack.sol",
+					"filename_relative": "Attack.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/Attack.sol",
+					"filename_short": "Attack.sol",
+					"is_dependency": false,
+					"lines": [
+						3
+					],
+					"starting_column": 1,
+					"ending_column": 25,
+					"_ext_source_hash": "be1324aef2812fb86cbcdbdc1ff9536f"
+				},
+				"type_specific_fields": {
+					"directive": [
+						"solidity",
+						"^",
+						"0.8",
+						".11"
+					]
+				}
+			}
+		],
+		"description": "Pragma version^0.8.11 (Attack.sol#3) necessitates a version too recent to be trusted. Consider deploying with 0.6.12/0.7.6/0.8.7\n",
+		"markdown": "Pragma version[^0.8.11](Attack.sol#L3) necessitates a version too recent to be trusted. Consider deploying with 0.6.12/0.7.6/0.8.7\n",
+		"first_markdown_element": "Attack.sol#L3",
+		"id": "29f0445663dfa367629ea2af722275700ea4ccad9c6690bcdd3092219b0b9108",
+		"check": "solc-version",
+		"impact": "Informational",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "withdraw",
+				"source_mapping": {
+					"start": 825,
+					"length": 83,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/Attack.sol",
+					"filename_relative": "Attack.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/Attack.sol",
+					"filename_short": "Attack.sol",
+					"is_dependency": false,
+					"lines": [
+						35,
+						36,
+						37
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "e0194316d3b43f0e1da5061743450fd1"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "Attack",
+						"source_mapping": {
+							"start": 167,
+							"length": 744,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/Attack.sol",
+							"filename_relative": "Attack.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/Attack.sol",
+							"filename_short": "Attack.sol",
+							"is_dependency": false,
+							"lines": [
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22,
+								23,
+								24,
+								25,
+								26,
+								27,
+								28,
+								29,
+								30,
+								31,
+								32,
+								33,
+								34,
+								35,
+								36,
+								37,
+								38,
+								39
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "withdraw()"
+				}
+			}
+		],
+		"description": "withdraw() should be declared external:\n\t- Attack.withdraw() (Attack.sol#35-37)\n",
+		"markdown": "withdraw() should be declared external:\n\t- [Attack.withdraw()](Attack.sol#L35-L37)\n",
+		"first_markdown_element": "Attack.sol#L35-L37",
+		"id": "8e9bde28bac28902757ef96b6b004471ab4375c96853da5fcf1f39f34fc42d72",
+		"check": "external-function",
+		"impact": "Optimization",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "attack",
+				"source_mapping": {
+					"start": 973,
+					"length": 162,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+					"filename_relative": "reentrancy.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+					"filename_short": "reentrancy.sol",
+					"is_dependency": false,
+					"lines": [
+						39,
+						40,
+						41,
+						42,
+						43
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "9e4dc7de5e1109ae194affa314355713"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "Attack",
+						"source_mapping": {
+							"start": 580,
+							"length": 559,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+							"filename_relative": "reentrancy.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+							"filename_short": "reentrancy.sol",
+							"is_dependency": false,
+							"lines": [
+								25,
+								26,
+								27,
+								28,
+								29,
+								30,
+								31,
+								32,
+								33,
+								34,
+								35,
+								36,
+								37,
+								38,
+								39,
+								40,
+								41,
+								42,
+								43,
+								44,
+								45,
+								46,
+								47
+							],
+							"starting_column": 1,
+							"ending_column": 0
+						}
+					},
+					"signature": "attack()"
+				}
+			},
+			{
+				"type": "node",
+				"name": "depositFunds.deposit{value: 1000000000000000000}()",
+				"source_mapping": {
+					"start": 1057,
+					"length": 38,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+					"filename_relative": "reentrancy.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+					"filename_short": "reentrancy.sol",
+					"is_dependency": false,
+					"lines": [
+						41
+					],
+					"starting_column": 9,
+					"ending_column": 47,
+					"_ext_source_hash": "ce89eb42e79c871eb258d4acd0d68f0b"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "attack",
+						"source_mapping": {
+							"start": 973,
+							"length": 162,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+							"filename_relative": "reentrancy.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+							"filename_short": "reentrancy.sol",
+							"is_dependency": false,
+							"lines": [
+								39,
+								40,
+								41,
+								42,
+								43
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "Attack",
+								"source_mapping": {
+									"start": 580,
+									"length": 559,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+									"filename_relative": "reentrancy.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+									"filename_short": "reentrancy.sol",
+									"is_dependency": false,
+									"lines": [
+										25,
+										26,
+										27,
+										28,
+										29,
+										30,
+										31,
+										32,
+										33,
+										34,
+										35,
+										36,
+										37,
+										38,
+										39,
+										40,
+										41,
+										42,
+										43,
+										44,
+										45,
+										46,
+										47
+									],
+									"starting_column": 1,
+									"ending_column": 0
+								}
+							},
+							"signature": "attack()"
+						}
+					}
+				}
+			}
+		],
+		"description": "Attack.attack() (reentrancy.sol#39-43) sends eth to arbitrary user\n\tDangerous calls:\n\t- depositFunds.deposit{value: 1000000000000000000}() (reentrancy.sol#41)\n",
+		"markdown": "[Attack.attack()](reentrancy.sol#L39-L43) sends eth to arbitrary user\n\tDangerous calls:\n\t- [depositFunds.deposit{value: 1000000000000000000}()](reentrancy.sol#L41)\n",
+		"first_markdown_element": "reentrancy.sol#L39-L43",
+		"id": "c2093992b6742a42398aba38f131dd9018384aaf0669a61174d78fd95c2c8d23",
+		"check": "arbitrary-send",
+		"impact": "High",
+		"confidence": "Medium"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "withdraw",
+				"source_mapping": {
+					"start": 304,
+					"length": 272,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+					"filename_relative": "reentrancy.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+					"filename_short": "reentrancy.sol",
+					"is_dependency": false,
+					"lines": [
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "345e49b414f0ec04aefad451d2c860c7"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "DepositFunds",
+						"source_mapping": {
+							"start": 139,
+							"length": 439,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+							"filename_relative": "reentrancy.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+							"filename_short": "reentrancy.sol",
+							"is_dependency": false,
+							"lines": [
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22,
+								23
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "withdraw()"
+				}
+			},
+			{
+				"type": "node",
+				"name": "(sent) = msg.sender.call{value: bal}()",
+				"source_mapping": {
+					"start": 440,
+					"length": 47,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+					"filename_relative": "reentrancy.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+					"filename_short": "reentrancy.sol",
+					"is_dependency": false,
+					"lines": [
+						18
+					],
+					"starting_column": 9,
+					"ending_column": 56,
+					"_ext_source_hash": "0633e0af34d907889b82ec756041f3a4"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "withdraw",
+						"source_mapping": {
+							"start": 304,
+							"length": 272,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+							"filename_relative": "reentrancy.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+							"filename_short": "reentrancy.sol",
+							"is_dependency": false,
+							"lines": [
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "DepositFunds",
+								"source_mapping": {
+									"start": 139,
+									"length": 439,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+									"filename_relative": "reentrancy.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+									"filename_short": "reentrancy.sol",
+									"is_dependency": false,
+									"lines": [
+										7,
+										8,
+										9,
+										10,
+										11,
+										12,
+										13,
+										14,
+										15,
+										16,
+										17,
+										18,
+										19,
+										20,
+										21,
+										22,
+										23
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "withdraw()"
+						}
+					}
+				},
+				"additional_fields": {
+					"underlying_type": "external_calls"
+				}
+			},
+			{
+				"type": "node",
+				"name": "balances[msg.sender] = 0",
+				"source_mapping": {
+					"start": 545,
+					"length": 24,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+					"filename_relative": "reentrancy.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+					"filename_short": "reentrancy.sol",
+					"is_dependency": false,
+					"lines": [
+						21
+					],
+					"starting_column": 9,
+					"ending_column": 33,
+					"_ext_source_hash": "d3f38d1477d8e1f1d62f7dd28ed44f03"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "withdraw",
+						"source_mapping": {
+							"start": 304,
+							"length": 272,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+							"filename_relative": "reentrancy.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+							"filename_short": "reentrancy.sol",
+							"is_dependency": false,
+							"lines": [
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "DepositFunds",
+								"source_mapping": {
+									"start": 139,
+									"length": 439,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+									"filename_relative": "reentrancy.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+									"filename_short": "reentrancy.sol",
+									"is_dependency": false,
+									"lines": [
+										7,
+										8,
+										9,
+										10,
+										11,
+										12,
+										13,
+										14,
+										15,
+										16,
+										17,
+										18,
+										19,
+										20,
+										21,
+										22,
+										23
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "withdraw()"
+						}
+					}
+				},
+				"additional_fields": {
+					"underlying_type": "variables_written",
+					"variable_name": "balances"
+				}
+			}
+		],
+		"description": "Reentrancy in DepositFunds.withdraw() (reentrancy.sol#14-22):\n\tExternal calls:\n\t- (sent) = msg.sender.call{value: bal}() (reentrancy.sol#18)\n\tState variables written after the call(s):\n\t- balances[msg.sender] = 0 (reentrancy.sol#21)\n",
+		"markdown": "Reentrancy in [DepositFunds.withdraw()](reentrancy.sol#L14-L22):\n\tExternal calls:\n\t- [(sent) = msg.sender.call{value: bal}()](reentrancy.sol#L18)\n\tState variables written after the call(s):\n\t- [balances[msg.sender] = 0](reentrancy.sol#L21)\n",
+		"first_markdown_element": "reentrancy.sol#L14-L22",
+		"id": "f3b3f2925c679db51985705d318a79b145ad3ecb9b11df59b3de6e2df09872ae",
+		"check": "reentrancy-eth",
+		"impact": "High",
+		"confidence": "Medium"
+	},
+	{
+		"elements": [
+			{
+				"type": "pragma",
+				"name": "^0.8.11",
+				"source_mapping": {
+					"start": 37,
+					"length": 24,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+					"filename_relative": "reentrancy.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+					"filename_short": "reentrancy.sol",
+					"is_dependency": false,
+					"lines": [
+						3
+					],
+					"starting_column": 1,
+					"ending_column": 25,
+					"_ext_source_hash": "be1324aef2812fb86cbcdbdc1ff9536f"
+				},
+				"type_specific_fields": {
+					"directive": [
+						"solidity",
+						"^",
+						"0.8",
+						".11"
+					]
+				}
+			}
+		],
+		"description": "Pragma version^0.8.11 (reentrancy.sol#3) necessitates a version too recent to be trusted. Consider deploying with 0.6.12/0.7.6/0.8.7\n",
+		"markdown": "Pragma version[^0.8.11](reentrancy.sol#L3) necessitates a version too recent to be trusted. Consider deploying with 0.6.12/0.7.6/0.8.7\n",
+		"first_markdown_element": "reentrancy.sol#L3",
+		"id": "7701c20867a26f3e043cb67b8feeaa0b5b302ffe1b8341a4f9ade59cc7d6302e",
+		"check": "solc-version",
+		"impact": "Informational",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "withdraw",
+				"source_mapping": {
+					"start": 304,
+					"length": 272,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+					"filename_relative": "reentrancy.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+					"filename_short": "reentrancy.sol",
+					"is_dependency": false,
+					"lines": [
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "345e49b414f0ec04aefad451d2c860c7"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "DepositFunds",
+						"source_mapping": {
+							"start": 139,
+							"length": 439,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+							"filename_relative": "reentrancy.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+							"filename_short": "reentrancy.sol",
+							"is_dependency": false,
+							"lines": [
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22,
+								23
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "withdraw()"
+				}
+			},
+			{
+				"type": "node",
+				"name": "(sent) = msg.sender.call{value: bal}()",
+				"source_mapping": {
+					"start": 440,
+					"length": 47,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+					"filename_relative": "reentrancy.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+					"filename_short": "reentrancy.sol",
+					"is_dependency": false,
+					"lines": [
+						18
+					],
+					"starting_column": 9,
+					"ending_column": 56,
+					"_ext_source_hash": "0633e0af34d907889b82ec756041f3a4"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "function",
+						"name": "withdraw",
+						"source_mapping": {
+							"start": 304,
+							"length": 272,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+							"filename_relative": "reentrancy.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+							"filename_short": "reentrancy.sol",
+							"is_dependency": false,
+							"lines": [
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22
+							],
+							"starting_column": 5,
+							"ending_column": 6
+						},
+						"type_specific_fields": {
+							"parent": {
+								"type": "contract",
+								"name": "DepositFunds",
+								"source_mapping": {
+									"start": 139,
+									"length": 439,
+									"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+									"filename_relative": "reentrancy.sol",
+									"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+									"filename_short": "reentrancy.sol",
+									"is_dependency": false,
+									"lines": [
+										7,
+										8,
+										9,
+										10,
+										11,
+										12,
+										13,
+										14,
+										15,
+										16,
+										17,
+										18,
+										19,
+										20,
+										21,
+										22,
+										23
+									],
+									"starting_column": 1,
+									"ending_column": 2
+								}
+							},
+							"signature": "withdraw()"
+						}
+					}
+				}
+			}
+		],
+		"description": "Low level call in DepositFunds.withdraw() (reentrancy.sol#14-22):\n\t- (sent) = msg.sender.call{value: bal}() (reentrancy.sol#18)\n",
+		"markdown": "Low level call in [DepositFunds.withdraw()](reentrancy.sol#L14-L22):\n\t- [(sent) = msg.sender.call{value: bal}()](reentrancy.sol#L18)\n",
+		"first_markdown_element": "reentrancy.sol#L14-L22",
+		"id": "5355e28581fa73a07b7b25e91cd38c7ec0b88a3d719773308a4099d54481d8e1",
+		"check": "low-level-calls",
+		"impact": "Informational",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "deposit",
+				"source_mapping": {
+					"start": 214,
+					"length": 84,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+					"filename_relative": "reentrancy.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+					"filename_short": "reentrancy.sol",
+					"is_dependency": false,
+					"lines": [
+						10,
+						11,
+						12
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "520cee89a421194ced74f8d4206d7094"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "DepositFunds",
+						"source_mapping": {
+							"start": 139,
+							"length": 439,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+							"filename_relative": "reentrancy.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+							"filename_short": "reentrancy.sol",
+							"is_dependency": false,
+							"lines": [
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22,
+								23
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "deposit()"
+				}
+			}
+		],
+		"description": "deposit() should be declared external:\n\t- DepositFunds.deposit() (reentrancy.sol#10-12)\n",
+		"markdown": "deposit() should be declared external:\n\t- [DepositFunds.deposit()](reentrancy.sol#L10-L12)\n",
+		"first_markdown_element": "reentrancy.sol#L10-L12",
+		"id": "232b02df4397a97bba97072caf73b50ca52bbfa4418c2f9fc80b397a2b805710",
+		"check": "external-function",
+		"impact": "Optimization",
+		"confidence": "High"
+	},
+	{
+		"elements": [
+			{
+				"type": "function",
+				"name": "withdraw",
+				"source_mapping": {
+					"start": 304,
+					"length": 272,
+					"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+					"filename_relative": "reentrancy.sol",
+					"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+					"filename_short": "reentrancy.sol",
+					"is_dependency": false,
+					"lines": [
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22
+					],
+					"starting_column": 5,
+					"ending_column": 6,
+					"_ext_source_hash": "345e49b414f0ec04aefad451d2c860c7"
+				},
+				"type_specific_fields": {
+					"parent": {
+						"type": "contract",
+						"name": "DepositFunds",
+						"source_mapping": {
+							"start": 139,
+							"length": 439,
+							"filename_used": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+							"filename_relative": "reentrancy.sol",
+							"filename_absolute": "/home/joao/Desktop/SMTChecker/examples/my_contracts/Reentrancy/reentrancy.sol",
+							"filename_short": "reentrancy.sol",
+							"is_dependency": false,
+							"lines": [
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14,
+								15,
+								16,
+								17,
+								18,
+								19,
+								20,
+								21,
+								22,
+								23
+							],
+							"starting_column": 1,
+							"ending_column": 2
+						}
+					},
+					"signature": "withdraw()"
+				}
+			}
+		],
+		"description": "withdraw() should be declared external:\n\t- DepositFunds.withdraw() (reentrancy.sol#14-22)\n",
+		"markdown": "withdraw() should be declared external:\n\t- [DepositFunds.withdraw()](reentrancy.sol#L14-L22)\n",
+		"first_markdown_element": "reentrancy.sol#L14-L22",
+		"id": "71b6c2797bf30d41f08046f3f036e33692c0c31d10ad9a91a3f15a177447766c",
+		"check": "external-function",
+		"impact": "Optimization",
+		"confidence": "High"
+	}
+]
